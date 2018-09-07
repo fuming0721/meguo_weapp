@@ -1,0 +1,17 @@
+<template name='orderNav'>
+  <view class='orderNavBox'>
+    <view class='orderNav'>
+      <block wx:for="{{navList}}" wx:key="{{index}}">
+        <view class="navBtn {{currentIndex == index?'current':''}}" bindtap='navChange' data-index='{{index}}'>{{item}}</view>
+      </block>
+    </view>
+
+    <picker mode="date" value="{{date}}" fields="month" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
+      <view class='datePicker'>
+        <text class='iconfont jdd-rili'></text>
+        <text>{{monthStr}}</text>
+      </view>
+    </picker>
+  </view>
+
+</template>

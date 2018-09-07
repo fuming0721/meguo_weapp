@@ -1,0 +1,11 @@
+<import src='../../../common/menuItem/menuItem.wxml' />
+<template name='menuNav'>
+    <block wx:for="{{menuNavList}}" wx:key="{{index}}">
+        <template is="menuItem" data="{{...item}}" />
+    </block>
+    <!-- 全部分类 -->
+    <navigator class='menuItem' url="/pages/couponSearch/couponSearch" open-type="switchTab">
+        <image class='menuItem_img' src='https://images.meguo.com/miniprogram/img/allGroup.png' lazy-load="true" mode="widthFix"></image>
+        <text class="menuItem_text">全部分类</text>
+    </navigator>
+</template>

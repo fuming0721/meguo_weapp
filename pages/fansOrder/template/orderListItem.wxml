@@ -1,0 +1,28 @@
+<wxs src="../../../filter/filter.wxs" module="filter" />
+<template name='orderListItem'>
+  <view class='goldDetailItem' bindtap='toDetail' data-id='{{orderDetail.num_iid}}' data-couponAmount='0' data-couponTotalCount='{{orderDetail.alipay_total_price}}'>
+    <view class='item_left imgBox'>
+      <image class='item_left_img' mode='widthFix' src='{{orderDetail.item_img}}'></image>
+    </view>
+    <view class='item_right'>
+      <view class='right_title'>
+        <text class='right_title_tabs {{ostatus==3?"tabs_3":""}} {{ostatus==12?"tabs_12":""}} {{ostatus==13?"tabs_13":""}} {{ostatus==14?"tabs_14":""}}'>{{filter.orderStatus(ostatus)}}</text>
+        <text class='right_title_text'>{{orderDetail.item_title}}</text>
+      </view>
+      <view class='right_time'>
+        <text class='right_startTime'>创建日 {{filter.DateFr(create_time)}}</text>
+        <text class='right_earningTime' wx:if="{{earning_time > 0}}">结算日 {{filter.DateFr(earning_time)}}</text>
+      </view>
+      <view class='right_order_num'>
+        <text class='order_numText'>订单号 {{orderDetail.trade_id}}</text>
+        <button class='right_order_num_btr' catchtap='copyOrderNum' data-ordernum='{{orderDetail.trade_id}}'>复制</button>
+      </view>
+      <view class='order_money'>
+        <text>订单金额￥{{filter.formatMoney(orderDetail.alipay_total_price)}}</text>
+        <text class='order_money_text'>
+          <block wx:if="{{ostatus==3}}">结算</block><block wx:else>预估</block>金币{{filter.MathRound(gold)}}枚
+        </text>
+      </view>
+    </view>
+  </view>
+</template>

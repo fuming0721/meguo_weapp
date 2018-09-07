@@ -1,0 +1,15 @@
+<wxs src="../../../filter/filter.wxs" module="filter" />
+<template name='goldHead'>
+  <view class='head'>
+    <view class='head_top'>
+      <image class='justImg' mode='widthFix' src='/images/icon-gold-coin.png'></image>
+      <view class='goldNum'>{{filter.MathRound(gold)}}<text>枚</text></view>
+      <text class='gold_value'>价值{{filter.formatMoney(gold/100)}}元</text>
+      <button class='exchangeBtn' bindtap='selectExchange'>立即兑换</button>
+    </view>
+    <view class='head_bottom'>
+      <text class='exchangeMoney'>已累计兑换: ￥{{filter.formatMoney(totalExchange)}}元</text>
+      <navigator class='exchangeRecord_text' url='/pages/exchangeRecord/exchangeRecord'>兑换记录</navigator>
+    </view>
+  </view>
+</template>

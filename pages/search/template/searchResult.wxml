@@ -1,0 +1,10 @@
+<!-- 搜索结果的nav -->
+<import src='./searchResultNav.wxml' />
+<!-- 搜索结果List -->
+<import src='./searchResultList.wxml' />
+<template name="searchResult">
+  <view class='searchResult'>
+    <template is='searchResultNav' data='{{searchType}}' />
+    <template is='searchResultList' data='{{searchDataList, nextPage}}' />
+  </view>
+</template>

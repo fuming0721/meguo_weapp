@@ -1,0 +1,96 @@
+<wxs src="../../../filter/filter.wxs" module="filter" />
+<template name='goldInfo'>
+  <view class='goldInfo'>
+
+    <view class='monthGold'>
+      <view class="income_item">
+        <view class="income_titel">
+          本月预估金币
+          <text class="iconfont jdd-wenhao" bindtap='getMsg' data-mark='thisMonthEarnings'></text>
+        </view>
+        <view class="income_num">
+          <text class="income_gold_Num">{{filter.MathRound(thisMonthForecastEarnings)}}</text>枚
+        </view>
+      </view>
+
+      <view class="income_item income_item_mid">
+        <view class="income_titel">
+          上月预估金币
+          <text class="iconfont jdd-wenhao" bindtap='getMsg' data-mark='lastMonthEarnings'></text>
+        </view>
+        <view class="income_num">
+          <text class="income_gold_Num">{{filter.MathRound(lastMonthForecastEarnings)}}</text>枚
+        </view>
+      </view>
+
+      <view class="income_item">
+        <view class="income_titel">
+          上月结算金币
+          <text class="iconfont jdd-wenhao" bindtap='getMsg' data-mark='lastMonthJiesuan'></text>
+        </view>
+        <view class="income_num">
+          <text class="income_gold_Num">{{filter.MathRound(lastMonthEarnings)}}</text>枚
+        </view>
+      </view>
+    </view>
+
+    <view class='dayGold'>
+      <view class='dayGold_title'>
+        <text class='iconfont jdd-jinri'></text>今日
+      </view>
+      <view class='day_gold_num'>
+
+        <view class='day_gold_payNum'>
+          <view class='day_gold_text'>
+            付款笔数
+            <text class='iconfont jdd-wenhao' bindtap='getMsg' data-mark='todayPayments'></text>
+          </view>
+          <view class='gold_Earnings'>
+            <text>{{filter.MathRound(todayPaidOrderNum)}}</text>
+          </view>
+        </view>
+
+        <view class='day_gold_payNum'>
+          <view class='day_gold_text'>
+            预估金币
+            <text class='iconfont jdd-wenhao' bindtap='getMsg' data-mark='todayEarnings'></text>
+          </view>
+          <view class='gold_Earnings'>
+            <text>{{filter.MathRound(todayForecastEarnings)}}</text>枚</view>
+        </view>
+
+      </view>
+    </view>
+
+
+
+    <view class='dayGold'>
+      <view class='dayGold_title'>
+        <text class='iconfont jdd-zuori'></text>昨日
+      </view>
+      <view class='day_gold_num'>
+
+        <view class='day_gold_payNum'>
+          <view class='day_gold_text'>
+            付款笔数
+            <text class='iconfont jdd-wenhao' bindtap='getMsg' data-mark='yesterdatyPayments'></text>
+          </view>
+          <view class='gold_Earnings'>
+            <text>{{filter.MathRound(yesterdayPaidOrderNum)}}</text>
+          </view>
+        </view>
+
+        <view class='day_gold_payNum'>
+          <view class='day_gold_text'>
+            预估金币
+            <text class='iconfont jdd-wenhao' bindtap='getMsg' data-mark='yesterdatyEarnings'></text>
+          </view>
+          <view class='gold_Earnings'>
+            <text>{{filter.MathRound(yesterdayForecastEarnings)}}</text>枚</view>
+        </view>
+
+      </view>
+    </view>
+
+  </view>
+</template>

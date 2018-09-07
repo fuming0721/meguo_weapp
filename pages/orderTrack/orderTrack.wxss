@@ -1,0 +1,63 @@
+.orderTrackPage{
+  padding: 20rpx 0;
+}
+.orderTrack_titel{
+  font-size: 24rpx;
+  color: #666;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.orderTrackformBox{
+ padding: 0 20rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.orderTrackInput{
+  height: 80rpx;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  color: #666;
+}
+.clearBtn{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 40rpx;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 40rpx;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  align-items: center;
+  font-size: 20rpx;
+  z-index: 9;
+}
+clearBtn::after{
+  border: none;
+}
+.submitBtn{
+  margin-top: 40rpx;
+  height: 80rpx;
+  width: 600rpx;
+  font-size: 32rpx;
+  border-radius: 60rpx;
+  line-height: 80rpx;
+}
+.instructions{
+  padding: 60rpx 20rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #666;
+}
+.instructions_titel{
+  font-size: 28rpx;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20rpx;
+}

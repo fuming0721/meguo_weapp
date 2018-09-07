@@ -1,0 +1,24 @@
+<!-- 列表item -->
+<import src='./printListItem.wxml' />
+<wxs src="../../../filter/filter.wxs" module="filter" />
+<template name='printList'>
+  <view class='printList'>
+    <block wx:for="{{footprintGroupList}}" wx:for-item="groupItem" wx:for-index="idx" wx:key="{{idx}}">
+      <view class='timeGroup'>
+        <view class='timeTitle'>{{filter.DateFr(groupItem.time)}}</view>
+        <block wx:for="{{groupItem.data}}" wx:key="{{index}}">
+          <template is='printListItem' data="{{...item, nowDate}}"></template>
+        </block>
+      </view>
+    </block>
+
+    <view class="weui-loadmore" wx:if='{{nextPage}}'>
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips mg_loading">正在加载...</view>
+    </view>
+
+    <view class="weui-loadmore weui-loadmore_line" wx:else>
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line mg_noMore">没有更多了</view>
+    </view>
+  </view>
+</template>

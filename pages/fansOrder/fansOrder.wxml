@@ -1,0 +1,12 @@
+<!-- nav -->
+<import src='./template/orderNav' />
+<!-- list -->
+<import src='./template/orderList' />
+
+<view class='fansOrderPage'>
+  <template is='orderNav' data="{{ navList, currentIndex, monthStr, date, startDate, endDate }}"></template>
+
+  <view class='warningInfo'>订单数据每10分钟更新一次，请耐心等待</view>
+
+  <template is='orderList' data="{{ orderList, nextPage, haveList }}"></template>
+</view>

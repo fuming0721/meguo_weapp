@@ -1,0 +1,10 @@
+<template name="hotSearch">
+  <view class='hotSearch'>
+    <block wx:for="{{hotSearchWord}}" wx:key="{{index}}">
+      <view class='hotSearchItem' bindtap='hotSearchTap' data-words='{{item.name}}'>
+        <view class='hotSearchItem_icon iconfont jdd-sousuo'></view>
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+</template>

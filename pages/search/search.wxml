@@ -1,0 +1,20 @@
+<!-- 顶部的搜索 -->
+<import src='./template/topSearch.wxml' />
+<!-- 搜索的nav -->
+<import src='./template/searchNav.wxml' />
+<!-- 搜索热词 -->
+<import src='./template/hotSearch.wxml' />
+<!-- 搜索结果 -->
+<import src='./template/searchResult.wxml' />
+<view class='searchPage'>
+  <view class='searchFixed'>
+    <template is='searchTop' data='{{ keywords }}' />
+  </view>
+
+  <view class='searchResultBox' wx:if="{{isShowSearchResult}}">
+    <template is='searchNav' data='{{ shopArr, shopIndex }}' />
+    <template is='searchResult' data='{{ searchType, searchDataList, nextPage }}' />
+  </view>
+
+  <template is='hotSearch' data='{{ hotSearchWord }}' wx:else />
+</view>

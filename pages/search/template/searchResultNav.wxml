@@ -1,0 +1,38 @@
+<template name="searchResultNav">
+  <view class='searchResultNav'>
+    <button class='resultnavBtn {{searchType=="default"?"resultActive":""}}' bindtap='sortNavClick' data-searchType='default' disabled='{{searchType=="default"}}'>综合</button>
+    <button class='resultnavBtn {{searchType=="coupon"?"resultActive":""}}' bindtap='sortNavClick' data-searchType='coupon' disabled='{{searchType=="coupon"}}'>仅看优惠券</button>
+
+    <button wx:if="{{searchType=='priceU'}}" class='resultnavBtn {{searchType=="priceU"?"resultActive":""}}' bindtap='sortNavClick' data-searchType='priceD'>
+      价格
+      <view class='resultnavBtn_surgery {{searchType}}'>
+        <view class='priceItem iconfont jdd-up price_jdd-up'></view>
+        <view class='priceItem iconfont jdd-down price_jdd-down'></view>
+      </view>
+    </button>
+
+    <button wx:else class='resultnavBtn {{searchType=="priceD"?"resultActive":""}}' bindtap='sortNavClick' data-searchType='priceU'>
+      价格
+      <view class='resultnavBtn_surgery {{searchType}}'>
+        <view class='priceItem iconfont jdd-up price_jdd-up'></view>
+        <view class='priceItem iconfont jdd-down price_jdd-down'></view>
+      </view>
+    </button>
+
+    <button wx:if="{{searchType=='volumeD'}}" class='resultnavBtn {{searchType=="volumeD"?"resultActive":""}}' bindtap='sortNavClick' data-searchType='volumeU'>
+      销量
+      <view class='resultnavBtn_surgery {{searchType}}'>
+        <view class='volumeItem iconfont jdd-up volume_jdd-up'></view>
+        <view class='volumeItem iconfont jdd-down volume_jdd-down'></view>
+      </view>
+    </button>
+
+    <button wx:else class='resultnavBtn {{searchType=="volumeU"?"resultActive":""}}' bindtap='sortNavClick' data-searchType='volumeD'>
+      销量
+      <view class='resultnavBtn_surgery {{searchType}}'>
+        <view class='volumeItem iconfont jdd-up volume_jdd-up'></view>
+        <view class='volumeItem iconfont jdd-down volume_jdd-down'></view>
+      </view>
+    </button>
+  </view>
+</template>

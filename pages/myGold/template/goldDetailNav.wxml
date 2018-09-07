@@ -1,0 +1,21 @@
+<template name='detailNav'>
+  <view class='detailNav'>
+    <view class='detailNavCenter'>
+
+      <navigator class='detailNav_item' url='/pages/orderTrack/orderTrack'>
+        遗漏订单找回
+        <text class='iconfont jdd-right navRight'></text>
+      </navigator>
+
+      <navigator class='detailNav_item' url='/pages/goldDetailList/goldDetailList'>
+        金币结算明细
+        <text class='iconfont jdd-right navRight'></text>
+      </navigator>
+
+      <navigator class='detailNav_item' url='/pages/fansOrder/fansOrder'>
+        全部订单明细
+        <text class='iconfont jdd-right navRight'></text>
+      </navigator>
+    </view>
+  </view>
+</template>

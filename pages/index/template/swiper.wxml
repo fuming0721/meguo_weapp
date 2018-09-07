@@ -1,0 +1,11 @@
+<template name='swiper'>
+  <swiper indicator-dots="true" indicator-active-color="#fff" autoplay="true" circular="true" class='index_swiper'>
+    <block wx:for="{{bannerImgArr}}" wx:key="{{index}}">
+      <swiper-item class='bannerItem imgBox'>
+        <navigator class='' url='{{item.link_url}}'>
+          <image class='indexbannerimg' src='{{item.pic_url}}' lazy-load="true" mode="widthFix"></image>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+</template>

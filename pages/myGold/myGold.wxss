@@ -1,0 +1,230 @@
+.head {
+  height: 360rpx;
+  background-color: #ecbb23;
+}
+
+.head_top {
+  height: 280rpx;
+  border-bottom: 2rpx solid #ffdc2b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.justImg {
+  width: 70rpx;
+}
+
+.goldNum {
+  color: #fff;
+  font-size: 52rpx;
+  margin: 14rpx 0 6rpx;
+}
+.goldNum text{
+  font-size: 28rpx;
+}
+.gold_value {
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.exchangeBtn {
+  font-size: 28rpx !important;
+  color: #666;
+  height: 48rpx;
+  border-radius: 48rpx;
+  width: 200rpx;
+  line-height: 48rpx;
+  margin-top: 10rpx;
+}
+
+.head_bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  align-items: center;
+  color: #fff;
+  font-size: 28rpx;
+  align-content: center;
+}
+
+.exchangeMoney, .exchangeRecord_text {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.iconNavBox {
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.iconNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15rpx 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.iconNav_item {
+  width: 160rpx;
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.iconNav_navIcon {
+  font-size: 40rpx;
+  color: #fff;
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+  margin-bottom: 10rpx;
+}
+
+.iconNav_navName {
+  font-size: 26rpx;
+  color: #333;
+  margin-top: 10rpx;
+}
+
+.goldInfo {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  margin-top: 10rpx;
+}
+
+.monthGold {
+  height: 160rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.income_item {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.income_titel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.income_num {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.income_gold_Num {
+  color: #ffc31a;
+  font-size: 40rpx;
+}
+
+.income_item_mid {
+  border-left: 2rpx solid #f2f2f2;
+  border-right: 2rpx solid #f2f2f2;
+}
+
+.dayGold{
+  height: 220rpx;
+  margin-top: 10rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+.dayGold_title{
+  height: 80rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+.dayGold_title text{
+  margin-right: 10rpx;
+  font-size: 44rpx;
+  color: #FFC31A;
+}
+.day_gold_num{
+  height: 140rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+.day_gold_payNum{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.day_gold_payNum:first-child{
+  border-right: 2rpx solid #f2f2f2;
+}
+.day_gold_text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  color: #666;
+}
+.jdd-wenhao{
+  margin-left: 10rpx;
+}
+.gold_Earnings{
+  font-size: 24rpx;
+  color: #666;
+}
+.gold_Earnings text{
+  font-size: 40rpx;
+  color: #ffc31a;
+}
+.detailNav{
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  margin: 10rpx 0 20rpx;
+}
+.detailNavCenter{
+  border-radius: 10rpx;
+  background-color: #fff;
+}
+.detailNav_item{
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26rpx;
+  color: #333;
+  border-bottom: 2rpx solid #f2f2f2;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.navRight{
+  color: #999;
+}

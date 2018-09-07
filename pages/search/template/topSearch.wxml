@@ -1,0 +1,9 @@
+<template name="searchTop">
+  <view class='topSearch'>
+    <form bindreset="clearValue" bindsubmit="startSearch" class='inputform'>
+      <input class='inputB' placeholder-class="holderInput" placeholder="搜索您想要的优惠商品" confirm-type="search" bindconfirm="startSearch" bindinput="inputC" name="keywords" value="{{keywords}}" bindfocus='inputs'></input>
+      <button class='iconfont jdd-cuo clearBtn' formType="reset" wx:if="{{keywords.length>0}}"></button>
+    </form>
+    <view class='startSearchBtn iconfont jdd-sousuo' bindtap='goSearch'></view>
+  </view>
+</template>

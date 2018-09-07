@@ -1,0 +1,20 @@
+<wxs src="../../../filter/filter.wxs" module="filter" />
+<template name='svipGoldMoney'>
+  <view class='svipGoldMoney'>
+    <navigator class='goldBox svipItem' url='/pages/myGold/myGold'>
+      <view class='goldNum'>
+        <text class='goldNumText'>{{filter.MathRound(monthEarnings)}}</text>
+        <view class='shenmewanyi'>枚</view>
+      </view>
+      <text class='svipText'>本月预估金币</text>
+    </navigator>
+
+    <navigator class='moneyBox svipItem' url='/pages/myWallet/myWallet'>
+      <view class='moneyNum'>
+        <text class='moneyNumText'>{{filter.formatMoney(balance)}}</text>
+        <view class='shenmewanyi'>元</view>
+      </view>
+      <text class='svipText'>我的钱包</text>
+    </navigator>
+  </view>
+</template>

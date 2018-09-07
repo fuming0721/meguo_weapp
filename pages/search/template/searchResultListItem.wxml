@@ -1,0 +1,30 @@
+<wxs src="../../../filter/filter.wxs" module="filter" />
+<template name="searchItem">
+
+  <view class='goodsItem' bindtap='goDetail' data-id='{{auctionId}}' data-couponAmount='{{couponAmount}}' data-couponTotalCount='{{couponTotalCount}}'>
+    <view class='goodsItem_imgBox imgBox'>
+      <image class='goodsItem_imgBox_img' src='{{ pictUrl }}' mode='widthFix' lazy-load></image>
+
+      <block>
+        <view class='goodsItem_quan_num' wx:if='{{ couponAmount>0 }}'>{{filter.MathRound(couponAmount)}}元券</view>
+      </block>
+    </view>
+
+    <view class='goodsItem_title'>{{ title }}</view>
+
+    <view class='goodsItem_priceBox'>
+      <view class='goodsItem_tag' wx:if='couponAmount>0'>券后</view>
+      <view class='goodsItem_priceBox_right'>
+        <view class='goodsItem_price'>
+          <text class='RMB'>￥</text>{{ filter.formatMoney(filter.formatMoney(zkPrice) - filter.formatMoney(couponAmount)) }}</view>
+        <view class='goodsItem_originPrice'>{{ filter.formatMoney(zkPrice) }}</view>
+      </view>
+    </view>
+
+    <view class='goodsItem_source_volume'>
+      <text>{{ filter.getShopSourceWithSearch(userType) }}</text>
+      <text> | </text>
+      <text>已售{{ filter.over10000(biz30day) }}件</text>
+    </view>
+  </view>
+</template>

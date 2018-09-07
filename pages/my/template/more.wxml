@@ -1,0 +1,23 @@
+<template name='more'>
+  <view class='more'>
+    <!-- 已登录 -->
+    <navigator class='bindCode' url='/pages/bindCode/bindCode' wx:if="{{!userInfo.isBindInvitationCode && userInfo}}">
+      <view class='bindCode_left'>
+        <view class='iconfont jdd-yaoqingma'></view>
+        绑定邀请码
+      </view>
+      <view class='bindCode_right iconfont jdd-right'></view>
+    </navigator>
+
+    <!-- 没登录 -->
+    <button open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo" class='bindCode' wx:elif="{{!userInfo}}">
+      <view class='bindCode_left'>
+        <view class='iconfont jdd-yaoqingma'></view>
+        绑定邀请码
+      </view>
+      <view class='bindCode_right iconfont jdd-right'></view>
+    </button>
+
+
+  </view>
+</template>

@@ -1,0 +1,332 @@
+.headBox {
+  height: 280rpx;
+  background-color: #fff;
+  position: relative;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.head {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+  background-color: #fd7274;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+
+.headLeft {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.userIcon {
+  width: 120rpx;
+  height: 120rpx;
+  border: 2rpx solid rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+  margin-right: 20rpx;
+  border-radius: 120rpx;
+}
+
+.username {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: #fff;
+}
+
+.name {
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+
+.welcome {
+  font-size: 22rpx;
+}
+
+.loginBtn {
+  color: #fd7274;
+  font-size: 28rpx;
+}
+
+.headLogin {
+  justify-content: flex-start;
+}
+
+.userMsg {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.username, .userCode {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  color: #fff;
+}
+
+.vipusername {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+
+.vipname {
+  font-size: 32rpx;
+  color: #fff;
+  font-weight: bold;
+}
+
+.vip {
+  font-size: 20rpx;
+  border: 2rpx solid #333;
+  color: #333;
+  background-color: #fff;
+  border-radius: 40rpx;
+  height: 26rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 26rpx;
+  padding: 0 20rpx;
+  margin-left: 20rpx;
+}
+.svip{
+  font-size: 20rpx;
+  border: 2rpx solid #2F2F2F;
+  color: #FCC321;
+  background-color: #2F2F2F;
+  border-radius: 40rpx;
+  height: 26rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 26rpx;
+  padding: 0 20rpx;
+  margin-left: 20rpx;
+}
+.userCode {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.code {
+  font-size: 24rpx;
+}
+
+.copyBtn {
+  width: 100rpx;
+  height: 36rpx;
+  line-height: 32rpx;
+  padding: 0;
+  border-radius: 36rpx;
+  box-sizing: border-box;
+  font-size: 22rpx;
+  color: #fff;
+  background-color: #fd7274;
+  border: 2rpx solid #fff;
+  margin: 0 0 0 30rpx;
+}
+
+copyBtn::after {
+  border: none;
+}
+
+.commonVipicon {
+  font-size: 20rpx;
+  color: #333;
+  margin-right: 4rpx;
+}
+.sVipicon{
+  font-size: 20rpx;
+  color: #FCC321;
+  margin-right: 4rpx;
+}
+.setting{
+  position: absolute;
+  right: 40rpx;
+  top:  30rpx;
+  font-size: 22rpx;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.settingIcon{
+  font-size: 28rpx;
+  margin-right: 10rpx;
+}
+
+.myServiceBox, .moreBox, .svipGoldBox{
+  padding: 20rpx;
+  box-sizing: border-box;
+  padding-bottom: 0;
+}
+
+.myService{
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.myService_title{
+  height: 80rpx;
+  width: 100%;
+  border-bottom: 2rpx solid #f2f2f2;
+  box-sizing: border-box;
+  line-height: 78rpx;
+  padding-left: 20rpx;
+  font-size: 28rpx;
+}
+
+.myService_list{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 15rpx 0;
+  box-sizing: border-box;
+}
+.myServiceNav{
+  width:177.5rpx;
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box
+}
+
+.myService_navIcon{
+  font-size: 40rpx;
+  color: #fff;
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+  margin-bottom: 10rpx;
+}
+
+.myService_navName{
+  font-size: 22rpx;
+  color: #333;
+}
+
+.more{
+  background-color: #fff;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.bindCode{
+  height: 80rpx;
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  color: #333;
+  background-color: #fff;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+.bindCode::after{
+  border: none;
+}
+.bindCode:last-child{
+  border: none;
+}
+.bindCode_left{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.jdd-yaoqingma{
+  font-size: 40rpx;
+  margin-right: 10rpx;
+}
+.bindCode_right{
+  color: #999;
+  font-size: 32rpx;
+}
+
+.svipGoldMoney{
+  height: 220rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.svipGoldMoney{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40rpx 0;
+  box-sizing: border-box;
+}
+
+.svipItem{
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.goldBox{
+  border-right: 2rpx solid #f2f2f2;
+}
+
+.goldNum, .moneyNum{
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.svipText{
+  font-size: 26rpx;
+  margin-top: 6rpx;
+  color: #333;
+}
+
+.goldNumText{
+  font-size: 50rpx;
+  color: #FFC31A;
+  font-weight: 500;
+}
+.moneyNumText{
+  font-size: 50rpx;
+  color: #EC3333;
+  font-weight: 500;
+}
+.shenmewanyi{
+  display: block;
+  height: 80rpx;
+  line-height: 82rpx;
+  font-size: 30rpx;
+}
+
+
+
+
+
+
+
+
+
+

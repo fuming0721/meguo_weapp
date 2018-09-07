@@ -1,0 +1,28 @@
+<!-- 个人中心顶部 -->
+<import src='./template/head.wxml' />
+<!-- 个人中心我的服务 -->
+<import src='./template/myService.wxml' />
+<!-- 个人中心底部功能 -->
+<import src='./template/more.wxml' />
+<!-- 个人中心超级会员模块 -->
+<import src='./template/svipGoldMoney.wxml' />
+
+<view class='my'>
+
+  <view class='headBox'>
+    <template is='head' data="{{userInfo}}"></template>
+  </view>
+
+  <view class='svipGoldBox' wx:if="{{userInfo.agentInfo}}">
+    <template is='svipGoldMoney' data="{{...userInfo}}"></template>
+  </view>
+
+  <view class='myServiceBox'>
+    <template is='myService' data="{{myService, myService2, userInfo}}"></template>
+  </view>
+
+  <view class='moreBox'>
+    <template is='more' data="{{userInfo}}"></template>
+  </view>
+
+</view>

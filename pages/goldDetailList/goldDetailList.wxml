@@ -1,0 +1,29 @@
+<!--pages/goldDetailList/goldDetailList.wxml-->
+<import src='./template/goldDetailItem' />
+<view class='goldDetailListPage'>
+  <picker mode="date" value="{{date}}" fields="month" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
+    <view class='datePicker'>
+      <text class='iconfont jdd-rili'></text>
+      <text>{{monthStr}}</text>
+    </view>
+  </picker>
+  <view class='goldDetailList' wx:if="{{haveDetail}}">
+    <block wx:for="{{goldDeatailList}}" wx:key="{{index}}">
+      <template is="goldDetailItem" data="{{...item}}" />
+    </block>
+
+    <view class="weui-loadmore" wx:if='{{nextPage}}'>
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips mg_loading">正在加载...</view>
+    </view>
+
+    <view class="weui-loadmore weui-loadmore_line" wx:else>
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line mg_noMore">没有更多了</view>
+    </view>
+  </view>
+
+  <view class='nogoldDetail' wx:else>
+    <image mode='widthFix' src='/images/noList.png'></image>
+    <text>没有金币</text>
+  </view>
+</view>

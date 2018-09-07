@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<import src='../../common/topSearch/topSearch.wxml' />  <!--顶部搜索-->
+<import src='./template/swiper.wxml' />   <!-- 首页轮播 -->
+<import src='./template/menuNav.wxml' />  <!-- 首页目录 -->
+<import src='./template/cheapList.wxml' />   <!-- 首页9.9包邮 -->
+<import src='./template/editorSay.wxml' />  <!-- 首页小编说 -->
+<import src='./template/featuredList.wxml' />  <!-- 首页今日精选 -->
+
+<view class="index">
+  <view class='indextop'>
+    <template is="topsearch" data="" />
+  </view>
+
+  <view class='bannerSwiper'>
+    <template is='swiper' data='{{ bannerImgArr }}' />
+  </view>
+
+  <view class='menuNavList'>
+    <template is='menuNav' data='{{ menuNavList, item }}' />
+  </view>
+
+  <view class='cheapList'>
+    <template is='cheapList' data='{{ homeCheapList }}' />
+  </view>
+
+  <view class='editorSayList'>
+    <template is='editorSay' data='{{ editorSayList }}' />
+  </view>
+
+  <view class='featuredList'>
+    <template is='featured' data='{{ featuredList, haveMore, userInfo }}' />
+  </view>
+
+</view>

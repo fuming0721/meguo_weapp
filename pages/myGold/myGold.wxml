@@ -1,0 +1,16 @@
+<!-- 我的金币顶部 -->
+<import src='./template/goldHead.wxml' />
+<!-- 我的金币图标导航 -->
+<import src='./template/iconNav.wxml' />
+<!-- 我的金币信息栏 -->
+<import src='./template/goldInfo.wxml' />
+<!-- 我的金币明细nav -->
+<import src='./template/goldDetailNav.wxml' />
+
+
+<view class='myGoldPage'>
+    <template is='goldHead' data="{{...myGoldInfo}}"></template>
+    <template is='iconNav' data="{{ iconNav }}"></template>
+    <template is='goldInfo' data="{{...myGoldInfo}}"></template>
+    <template is='detailNav' data=""></template>
+</view>

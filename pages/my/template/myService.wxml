@@ -1,0 +1,22 @@
+<template name='myService'>
+  <view class='myService'>
+    <view class='myService_title'>我的服务</view>
+    <view class='myService_list'>
+
+      <block wx:for="{{myService}}" wx:key="{{index}}" wx:if="{{userInfo.agentInfo}}">
+        <view bindtap='pageJump' data-pageName='{{item.page}}' class='myServiceNav'>
+          <view class='myService_navIcon {{item.icon}}' style='background-color:{{item.bgcolor}}'></view>
+          <view class='myService_navName'>{{item.name}}</view>
+        </view>
+      </block>
+
+      <block wx:for="{{myService2}}" wx:key="{{index}}">
+        <view bindtap='pageJump' data-pagename='{{item.page}}' class='myServiceNav'>
+          <view class='myService_navIcon {{item.icon}}' style='background-color:{{item.bgcolor}}'></view>
+          <view class='myService_navName'>{{item.name}}</view>
+        </view>
+      </block>
+
+    </view>
+  </view>
+</template>

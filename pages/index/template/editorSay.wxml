@@ -1,0 +1,21 @@
+<template name='editorSay'>
+  <view class='index_title'>—— 小编种草 ——</view>
+  <scroll-view class='editorSay_swiper' scroll-x='true'>
+    <block wx:for="{{editorSayList}}" wx:key="{{index}}">
+      <view class='editorSayList_item'>
+        <navigator url='/pages/editorSay/editorSay?id={{item.id}}'>
+          <view class='editorSayList_item_center imgBox'>
+            <image class='editorSayList_item_img' mode='widthFix' src='{{item.extension.material[0].pic}}'></image>
+            <view class='editorSayList_item_title'>
+              <view class='editorSayList_item_text'>{{item.content}}</view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </block>
+  </scroll-view>
+
+  <view class='seeMorebox'>
+    <navigator url='/pages/editorSay/editorSay?id=0' class='seeMoreBtn'>查看更多</navigator>
+  </view>
+</template>

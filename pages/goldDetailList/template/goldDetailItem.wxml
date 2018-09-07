@@ -1,0 +1,14 @@
+<wxs src="../../../filter/filter.wxs" module="filter" />
+<template name='goldDetailItem'>
+  <view class='goldDetailItem'>
+    <view class="item_top">
+      <text class="item_title">{{orderDetail.item_title}}</text>
+      <text class="item_gold">+{{filter.MathRound(gold)}}</text>
+    </view>
+    <view class="item_bottom">
+      <text class="item_bottom_text">创建日{{filter.DateFr(create_time)}}</text>
+      <text class="item_bottom_text">结算日{{filter.DateFr(earning_time)}}</text>
+      <text class="item_bottom_text">订单金额￥{{filter.formatMoney(orderDetail.alipay_total_price)}}</text>
+    </view>
+  </view>
+</template>

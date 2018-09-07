@@ -1,0 +1,8 @@
+<!-- 二级分类页排序 -->
+<import src='/common/categoryNav/categoryNav' />
+<!-- 二级分类商品List -->
+<import src='./template/subCategoryGoodsList.wxml' />
+<view class='subcategoryPage'>
+  <template is='categoryNav' data='{{ sortname, sortCannel }}' />
+  <template is='subCategoryGoodsList' data='{{ subCategoryGoodsList, nextPage, userInfo }}' />
+</view>

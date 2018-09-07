@@ -1,0 +1,108 @@
+/* pages/footPrint/footprint.wxss */
+
+.noprint {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.myFoot {
+  width: 500rpx;
+  margin-top: 100rpx;
+}
+
+.nofootText {
+  margin: 40rpx 0;
+  color: #999;
+  font-size: 28rpx;
+}
+
+.backHome {
+  width: 200rpx;
+  height: 70rpx;
+  background-color: #f23d3d;
+  border-radius: 8rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 26rpx;
+}
+
+.timeTitle {
+  padding: 6rpx 20rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.printListItem {
+  background-color: #fff;
+  border-bottom: 2rpx solid #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 230rpx;
+  position: relative;
+
+}
+
+.itemLeft {
+  padding: 20rpx;
+  height: 192rpx;
+  width: 192rpx;
+  text-align: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.itemLeftImg {
+  width: 192rpx;
+}
+
+.itemRight {
+  height: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  padding-left: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.itemRight_title {
+  font-size: 28rpx;
+  text-align: left;
+  width: 100%;
+  color: #333;
+}
+
+.itemRight_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.itemRight_price {
+  font-size: 36rpx;
+  color: #e53939;
+}
+
+.volume, .created_time{
+  font-size: 22rpx;
+  color: #999;
+}
+.line{
+  margin: 0 10rpx;
+}
+
+.invalid{
+  position: absolute;
+  width: 180rpx;
+  height: 180rpx;
+  right: 0;
+}

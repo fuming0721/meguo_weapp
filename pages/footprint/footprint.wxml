@@ -1,0 +1,14 @@
+<!-- 没有足迹 -->
+<import src='./template/noPrint.wxml' />
+<!-- 有足迹 -->
+<import src='./template/printList.wxml' />
+
+<view class='footprintPage'>
+  <block wx:if="{{hasFootprint}}">
+    <template is='printList' data="{{footprintGroupList, nextPage, nowDate}}"></template>
+  </block>
+
+  <block wx:else>
+    <template is='npPrint'></template>
+  </block>
+</view>

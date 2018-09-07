@@ -1,0 +1,16 @@
+<view class='orderTrackPage'>
+  <view class='orderTrack_titel'>
+    若发现有订单遗漏，可以手动提交订单号来找回订单；
+  </view>
+  <view class='orderTrackformBox'>
+    <form bindsubmit="formSubmit" bindreset="formReset" class='orderTrackForm'>
+      <input class='orderTrackInput' name="input" type='number' bindinput="bindinput" placeholder="请在此处粘贴您的淘宝/天猫订单号" />
+      <button class='iconfont jdd-cuo clearBtn' formType="reset" wx:if="{{showClearBtn}}"></button>
+      <button size='default' type='warn' confirm-type="done" form-type='submit' class='submitBtn' disabled='{{!showClearBtn}}'>提交</button>
+    </form>
+  </view>
+  <view class='instructions'>
+    <view class='instructions_titel'>【操作方法】</view>
+    <text>打开我的淘宝→我的订单→选择您的订单→查看订单详情→在联系卖家下方有订单编号，复制后在此处提交即可。</text>
+  </view>
+</view>

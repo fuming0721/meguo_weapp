@@ -1,0 +1,7 @@
+<template name='npPrint'>
+  <view class='noprint'>
+    <image class='myFoot' mode='widthFix' src='/images/myfeet.png'></image>
+    <text class='nofootText'>你还没有留下足迹</text>
+    <navigator class='backHome' open-type='switchTab' url="/pages/index/index">返回首页</navigator>
+  </view>
+</template>

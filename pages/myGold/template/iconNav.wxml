@@ -1,0 +1,12 @@
+<template name='iconNav'>
+  <view class='iconNavBox'>
+  <view class='iconNav'>
+    <block wx:for="{{iconNav}}" wx:key="{{index}}">
+        <navigator url='{{item.page}}' class='iconNav_item'>
+          <view class='iconNav_navIcon {{item.icon}}' style='background-color:{{item.bgcolor}}'></view>
+          <view class='iconNav_navName'>{{item.name}}</view>
+        </navigator>
+      </block>
+      </view>
+  </view>
+</template>

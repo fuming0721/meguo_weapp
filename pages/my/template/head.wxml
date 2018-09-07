@@ -1,0 +1,39 @@
+<template name='head'>
+  <view class='setting' wx:if="{{userInfo}}">
+    <text class='settingIcon iconfont jdd-shezhi'></text> 账号管理
+  </view>
+  <view class='head' wx:if="{{!userInfo}}">
+    <view class='headLeft'>
+      <image class='userIcon' src='/images/fansholdimg.png'></image>
+      <view class='username'>
+        <text class='name'>游客，你好~</text>
+        <text class='welcome'>欢迎来到聚多多优惠</text>
+      </view>
+    </view>
+    <view class='headRight'>
+      <button class='loginBtn' size='mini' open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">微信登录</button>
+    </view>
+  </view>
+
+
+  <view class='head headLogin' wx:else>
+    <image class='userIcon' src="{{userInfo.avatar}}"></image>
+    <view class='userMsg'>
+      <view class='vipusername'>
+        <text class='vipname'>{{userInfo.username}}</text>
+
+        <view class='svip' wx:if="{{userInfo.agentInfo}}">
+          <view class='iconfont sVipicon jdd-zuanshi'></view> 超级会员
+        </view>
+
+        <view class='vip' wx:else>
+          <view class='iconfont commonVipicon jdd-zuanshi'></view> 普通会员
+        </view>
+      </view>
+      <view class='userCode'>
+        <text class='code'>邀请码：{{userInfo.invitation_code}}</text>
+        <button class='copyBtn' bindtap='copyInvitationCode' data-code='{{userInfo.invitation_code}}'>复制</button>
+      </view>
+    </view>
+  </view>
+</template>

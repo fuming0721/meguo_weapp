@@ -1,0 +1,7 @@
+<template name="searchNav">
+  <view class='searchNav'>
+    <block wx:for="{{shopArr}}" wx:key="{{index}}">
+      <button bindtap='changeShop' disabled='{{item.index==shopIndex}}' data-shopIndex='{{item.index}}' class='searchNavItem {{item.index==shopIndex?"active":""}}'>{{item.name}}</button>
+    </block>
+  </view>
+</template>

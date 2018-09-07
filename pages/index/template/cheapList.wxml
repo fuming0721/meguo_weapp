@@ -1,0 +1,24 @@
+<!-- 首页9块9包邮 -->
+<wxs src="../../../filter/filter.wxs" module="filter" />
+<template name='cheapList'>
+  <view class='index_title'>—— 9.9包邮 ——</view>
+
+  <scroll-view class='cheapScroll' scroll-x='true'>
+    <block wx:for="{{homeCheapList}}" wx:key="{{index}}">
+      <view class='homeCheapList_item'>
+      <navigator url='/pages/detail/detail?id={{item.id}}'>
+        <image class='homeCheapList_item_img imgBox' src='{{item.thread_img}}'></image>
+        <view class='homeCheapList_item_title'>{{item.title}}</view>
+        <view class='homeCheapList_item_info'>
+          <text class='homeCheapList_item_price'>￥{{filter.formatMoney(item.extension.price)}}</text>
+          <text class='homeCheapList_item_volume'>已售:{{filter.over10000(item.extension.volume)}}</text>
+        </view>
+        </navigator>
+      </view>
+    </block>
+  </scroll-view>
+  
+  <view class='seeMorebox'>
+    <navigator  url="/pages/baoyou/baoyou" open-type="switchTab" class='seeMoreBtn'>查看更多</navigator>
+  </view>
+</template>
