@@ -1,0 +1,6 @@
+<template name="menuItem">
+    <view class='menuItem' bindtap='toCategory' data-cate_id='{{id}}' data-sub_id='{{id}}' data-sub_cid='{{pid}}' data-sub_title='{{name}}'>
+        <image class='menuItem_img' src='{{iconfont || app_icon}}' lazy-load="true" mode="widthFix"></image>
+        <text class="menuItem_text">{{name}}</text>
+    </view>
+</template>

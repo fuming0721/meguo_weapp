@@ -1,0 +1,125 @@
+// 金额保留两位小数
+var formatMoney = function(value) {
+  return parseFloat(value).toFixed(2);
+}
+
+// 金额取整
+var MathRound = function(value) {
+  return Math.round(value);
+}
+// 商城过滤
+var getShopSource = function(value) {
+  if (value == 1) {
+    return "天猫"
+  } else if (value == 2) {
+    return "淘宝"
+  }
+}
+// 搜券页面的商城过滤
+var getShopSourceWithSearch = function(value) {
+  if (value == 0) {
+    return "淘宝"
+  } else if (value == 1) {
+    return "天猫"
+  }
+}
+
+// 超出1万和1亿的过滤器
+var over10000 = function(num) {
+  if (num < 10000) {
+    return num;
+  } else if (num >= 100000000) {
+    return parseInt(num / 100000000) + "亿";
+  } else {
+    return parseInt(num / 10000) + "万";
+  }
+}
+
+// 时间
+var DateFr = function(time) {
+  var date = getDate(time * 1000);
+  var M = date.getMonth() + 1;
+  var y = date.getFullYear();
+  var d = date.getDate();
+  if (M < 10) M = "0" + M;
+  if (d < 10) d = "0" + d;
+  return y + "." + M + "." + d + "";
+}
+
+// 格式化成完整时间
+var formatFullDate = function (value) {
+  var now = getDate(value * 1000);
+  var year = now.getFullYear();
+  var month = now.getMonth() + 1;
+  var date = now.getDate();
+  var hour = now.getHours();
+  var minute = now.getMinutes();
+  month = month < 10 ? '0' + month : month;
+  date = date < 10 ? '0' + date : date;
+  hour = hour < 10 ? '0' + hour : hour;
+  minute = minute < 10 ? '0' + minute : minute;
+  return year + "-" + month + "-" + date + " " + hour + ":" + minute
+}
+
+// 格式化日期
+var formatDate = function(str) {
+  var now = getDate();
+    difference = now - str * 1000,
+    result = '',
+    minute = 1000 * 60,
+    hour = minute * 60,
+    day = hour * 24,
+    halfamonth = day * 15,
+    month = day * 30,
+    year = month * 12,
+    _year = difference / year,
+    _month = difference / month,
+    _week = difference / (7 * day),
+    _day = difference / day,
+    _hour = difference / hour,
+    _min = difference / minute;
+  if (_year >= 1) {
+    result = "" + ~~(_year) + "年前"
+  } else if (_month >= 1) {
+    result = "" + ~~(_month) + "月前"
+  } else if (_week >= 1) {
+    result = "" + ~~(_week) + "周前"
+  } else if (_day >= 1) {
+    result = "" + ~~(_day) + "天前"
+  } else if (_hour >= 1) {
+    result = "" + ~~(_hour) + "小时前"
+  } else if (_min >= 1) {
+    result = "" + ~~(_min) + "分钟前"
+  } else result = "刚刚";
+  return result;
+};
+
+// 粉丝订单状态判断
+var orderStatus = function(value){
+  switch (value){
+    case 3:
+      return '已结算';
+      break;
+    case 12:
+      return '已付款';
+      break;
+    case 13:
+      return '已失效';
+      break;
+    case 14:
+      return '已成功';
+      break;      
+  }
+};
+
+module.exports = {
+  over10000: over10000,
+  formatMoney: formatMoney,
+  DateFr: DateFr,
+  MathRound: MathRound,
+  getShopSource: getShopSource,
+  getShopSourceWithSearch: getShopSourceWithSearch,
+  formatDate: formatDate,
+  formatFullDate: formatFullDate,
+  orderStatus: orderStatus
+}

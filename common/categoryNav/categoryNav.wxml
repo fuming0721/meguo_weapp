@@ -1,0 +1,10 @@
+<!-- 分类页和二级分类页排序 -->
+<template name="categoryNav">
+  <view class='categoryNav'>
+    <block wx:for="{{sortname}}" wx:key="{{item.channel}}">
+      <view class='categoryNav_item' bindtap='changeChannel' data-channel='{{item.channel}}'>
+        <view class='categoryNav_item_center {{sortCannel==item.channel?"active":""}}'>{{item.name}}</view>
+      </view>
+    </block>
+  </view>
+</template>

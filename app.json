@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/baoyou/baoyou",
+    "pages/search/search",
+    "pages/my/my",
+    "pages/couponSearch/couponSearch",
+    "pages/subCategory/subCategory",
+    "pages/category/category",
+    "pages/detail/detail",
+    "pages/editorSay/editorSay",
+    "pages/album/album",
+    "pages/detailForSearch/detailForSearch",
+    "pages/footprint/footprint",
+    "pages/bindCode/bindCode",
+    "pages/customerService/customerService",
+    "pages/myGold/myGold",
+    "pages/myWallet/myWallet",
+    "pages/exchangeRecord/exchangeRecord",
+    "pages/orderTrack/orderTrack",
+    "pages/inviteFriends/inviteFriends",
+    "pages/fansOrder/fansOrder",
+    "pages/fansList/fansList",
+    "pages/help/help",
+    "pages/myCollection/myCollection",
+    "pages/goldDetailList/goldDetailList"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "聚多多优惠",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 400
+  },
+  "debug": false,
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#d81e06",
+    "borderStyle": "#999",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/barIcon/home(off)@2x.png",
+        "selectedIconPath": "images/barIcon/home(on)@2x.png",
+        "text": "首 页"
+      },
+      {
+        "pagePath": "pages/baoyou/baoyou",
+        "iconPath": "images/barIcon/9.9(off)@2x.png",
+        "selectedIconPath": "images/barIcon/9.9(on)@2x.png",
+        "text": " 9.9包邮"
+      },
+      {
+        "pagePath": "pages/couponSearch/couponSearch",
+        "iconPath": "images/barIcon/search(off)@2x.png",
+        "selectedIconPath": "images/barIcon/search(on)@2x.png",
+        "text": "搜 券"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/barIcon/my(off)@2x.png",
+        "selectedIconPath": "images/barIcon/my(on)@2x.png",
+        "text": "我"
+      }
+    ]
+  }
+}

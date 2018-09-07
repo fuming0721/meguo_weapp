@@ -1,0 +1,38 @@
+<wxs src="../../filter/filter.wxs" module="filter" />
+<template name="goodsItem">
+  <view class='goodsItem' bindtap='goDetail' data-id='{{id}}' data-album='{{album}}' data-type='{{post_typeid}}'  wx:if="{{post_typeid !=6 || album.album_num>0}}">
+    <view class='goodsItem_imgBox imgBox'>
+      <image class='goodsItem_imgBox_img' src='{{ thread_img }}' mode='widthFix' lazy-load></image>
+
+      <!-- 普通商品 -->
+      <!-- <block wx:if='{{ post_typeid==1 || !post_typeid}}'>
+        <view class='goodsItem_quan_num' wx:if='{{ extension.discount==3 }}'>{{filter.MathRound(extension.origin_price-extension.price)}}元券</view>
+      </block> -->
+
+      <!-- 如果是代理 -->
+      <block wx:if='{{ userInfo.agentInfo && extension.gold>0 }}'>
+        <view class='goodsItem_gold'>赚金币{{filter.MathRound(extension.gold)}}</view>
+      </block>
+      
+      <!-- 专辑 -->
+        <view class='goodsItem_album_num' wx:if="{{ post_typeid==6}}">{{album.album_num}}款</view>
+    </view>
+
+    <view class='goodsItem_title'>{{ title }}</view>
+
+    <view class='goodsItem_priceBox'>
+      <view class='goodsItem_tag' wx:if='extension.discount==3'>券后</view>
+      <view class='goodsItem_priceBox_right'>
+        <view class='goodsItem_price'>
+          <text class='RMB'>￥</text>{{ filter.formatMoney(extension.price) }}</view>
+        <view class='goodsItem_originPrice'>{{ filter.formatMoney(extension.origin_price) }}</view>
+      </view>
+    </view>
+
+    <view class='goodsItem_source_volume'>
+      <text>{{ filter.getShopSource(extension.mall_id) }}</text>
+      <text> | </text>
+      <text>已售{{ filter.over10000(extension.volume) }}件</text>
+    </view>
+  </view>
+</template>

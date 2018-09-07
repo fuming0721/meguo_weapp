@@ -1,0 +1,26 @@
+/**app.wxss**/
+@import './iconfont.wxss';
+@import './common/menuItem/menuItem.wxss';
+@import './common/goodsListItem/goodsListItem.wxss';
+@import './common/topSearch/topSearch.wxss';
+@import './weui.wxss';
+
+.mg_loading{
+  font-size: 24rpx;
+  color: #999;
+}
+
+.mg_noMore{
+  background-color: #f2f2f2;
+  font-size: 24rpx;
+  top: -1em;
+}
+page{
+  background-color: #f2f2f2;
+}
+
+.imgBox{
+  background-image: url("https://images.meguo.com/miniprogram/img/placeholderImg.png");
+  background-size: cover;
+  background-position: center center;
+}

@@ -1,0 +1,25 @@
+.categoryNav{
+  height: 80rpx;
+  border-top: 2rpx solid #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 10rpx;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+}
+.categoryNav_item{
+  font-size: 26rpx;
+  text-align: center;
+  width: 25%;
+  height: 80rpx;
+  line-height: 76rpx;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+
+.categoryNav_item_center.active{
+  border-bottom: 4rpx solid #e53939;
+}

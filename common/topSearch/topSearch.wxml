@@ -1,0 +1,6 @@
+<template name='topsearch'>
+  <navigator class='topsearchInput' url='../search/search'>
+    <view class='startSearchBtn iconfont jdd-sousuo'></view>
+    <text>搜索您想要的优惠商品!</text>
+  </navigator>
+</template>
