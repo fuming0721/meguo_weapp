@@ -1,0 +1,24 @@
+<template name='buy'>
+  <view class='buy_like_collect'>
+    <button wx:if='{{isLiked}}' class='buy_like liked' bindtap='prosLike' disabled>
+      <icon class='iconfont jdd-liked buy_icon' plain></icon>
+      已点赞
+    </button>
+    <button wx:else class='buy_like' bindtap='prosLike'>
+      <icon class='iconfont jdd-like buy_icon' plain></icon>
+      点赞
+    </button>
+    <button wx:if='{{isCollect}}' class='buy_collect collected' disabled>
+      <icon class='iconfont jdd-collected buy_icon'></icon>
+      已收藏
+    </button>
+    <button wx:else class='buy_collect'>
+      <icon class='iconfont jdd-collect buy_icon'></icon>
+      收藏
+    </button>
+  </view>
+  <view class='buy_btn_box'>
+    <button class='share_btn' size='default' disabled='{{!canShare}}' open-type='share'>分享</button>
+    <button class='buy_btn' type='warn' size='default' bindtap='showTaokouling'>点击购买</button>
+  </view>
+</template>

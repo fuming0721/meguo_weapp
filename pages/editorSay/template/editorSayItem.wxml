@@ -1,0 +1,25 @@
+<wxs src="../../../filter/filter.wxs" module="filter" />
+<template name='editorSayItem'>
+  <view class='item_container'>
+    <view class='top'>
+      <image class='top_left imgBox' src='{{user.avatar}}' mode=""></image>
+      <view class='top_right'>
+        <text class='userName'>{{user.username}}</text>
+        <text class='createTime'>{{filter.DateFr(created_time)}}</text>
+      </view>
+    </view>
+
+    <view class='item_content'>
+      <rich-text class='item_content_text' nodes="{{content}}"></rich-text>
+    </view>
+
+    <view class='item_goods_list'>
+      <block wx:for="{{extension.material}}" wx:key="{{index}}">
+        <view class='goods_item imgBox' bindtap='itemClick' data-data='{{item}}' data-index='{{index}}' data-imgBox='{{extension.material}}'>
+          <image class='goods_item_img' lazy-load="true" src='{{item.pic}}' mode="widthFix"></image>
+          <view wx:if="{{item.type=='g'}}" class='goods_item_price'>￥{{filter.formatMoney(item.price)}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</template>

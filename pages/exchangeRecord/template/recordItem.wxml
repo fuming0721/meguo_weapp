@@ -1,0 +1,13 @@
+<wxs src="../../../filter/filter.wxs" module="filter" />
+<template name='recordItem'>
+  <view class='recordItem'>
+    <view class="item_top">
+      <text class="item_title">{{remark}}</text>
+      <text class="item_time">{{filter.formatFullDate(created_time)}}</text>
+    </view>
+    <view class="item_bottom">
+      <text class="item_num">数量：{{number}}枚</text>
+      <text class="item_money">+{{amount}}元</text>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,25 @@
+<!--pages/baoyou/baoyou.wxml-->
+<!--顶部搜索-->
+<import src='../../common/topSearch/topSearch.wxml' />
+<!--顶部活动列表-->
+<import src='./template/activeList.wxml' />
+<!--包邮列表-->
+<import src='./template/baoyouList.wxml' />
+
+<view class='baoyouPage' style='min-height:{{wHeight}}px'>
+
+  <view class='baoyoutop'>
+    <view class='baoyoutopSearch'>
+      <template is="topsearch" data="" />
+    </view>
+    <template is="activeList" data="{{ randomADlist }}" />
+  </view>
+
+  <view class='baoyouNav'>
+    <block wx:for="{{navList}}" wx:key="{{index}}">
+      <view class='baoyouNavitem {{item.index==navActiveIndex?"nav_active":""}}' bindtap='changeNav' data-index='{{item.index}}'>{{item.name}}</view>
+    </block>
+  </view>
+  <template is="baoyouList" data="{{ goodsListArr, nextPage, userInfo }}" />
+
+</view>

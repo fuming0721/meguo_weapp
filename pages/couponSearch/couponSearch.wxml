@@ -1,0 +1,13 @@
+<!--pages/couponSearch/couponSearch.wxml-->
+<import src='./template/CSTop.wxml' />
+<!-- 搜券 -->
+<import src='./template/menuNav.wxml' />
+<!-- 二级分类图标 -->
+<view class="couponSearchPage">
+  <template is="CS_top" data="{{shopArr, shopIndex, haveValue, keywords, conpunNum}}" />
+
+  <view class='munetitle'><view class='fenleiTitle iconfont jdd-fenlei1'></view>全部分类</view>
+  <view class='menuNavList'>
+    <template is='menuNav' data='{{ menuNavList }}' />
+  </view>
+</view>

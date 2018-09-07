@@ -1,0 +1,12 @@
+<view class='bindcodePage'>
+  <view class='bindCode_titel'>
+  请填入推荐人的邀请码，不支持字符、特殊符号，成功绑定后不可更改。
+  </view>
+  <view class='bindcodeformBox'>
+    <form bindsubmit="formSubmit" bindreset="formReset" class='bindcodeForm'>
+       <input class='bindcodeInput' name="input" type='text' bindinput="bindinput" placeholder="输入邀请码"/>
+       <button class='iconfont jdd-cuo clearBtn' formType="reset" wx:if="{{showClearBtn}}"></button>
+       <button size='default' type='warn' form-type='submit' class='submitBtn' disabled='{{!showClearBtn}}'>保存</button>
+    </form>
+    </view>
+</view>

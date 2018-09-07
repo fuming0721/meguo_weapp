@@ -1,0 +1,6 @@
+<template name='buy'>
+  <view class='buy_btn_box'>
+    <button class='share_btn' size='default' disabled='{{!canShare}}' open-type='share'>分享</button>
+    <button class='buy_btn' type='warn' size='default' bindtap='showTaokouling'>点击购买</button>
+  </view>
+</template>

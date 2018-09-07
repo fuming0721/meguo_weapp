@@ -1,0 +1,18 @@
+/* pages/album/album.wxss */
+
+.cover_img_box {
+  width: 750rpx;
+}
+
+.cover_img {
+  width: 750rpx;
+  display: block;
+}
+
+.album_goodList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 14rpx;
+  box-sizing: border-box;
+}

@@ -1,0 +1,30 @@
+<template name='sellerInfo'>
+  <view class='sellerInfo'>
+    <view class='sellerNameInfo'>
+      <image class='seller_shopIcon' src='{{sellerInfo.shop_icon}}' mode='widthFix'></image>
+      <view class='seller_shop'>
+        <view class='seller_shop_name'>{{sellerInfo.shop_name}}</view>
+        <view class='seller_shop_icon'>
+            <image class='sellerIcon' src='{{sellerIcon}}' mode='aspectFit' bindload="imageLoad" style="width:{{sellerIconWidth*2}}rpx; height:{{sellerIconHeight*2}}rpx;"></image>
+        </view>
+      </view>
+    </view>
+    <view class="seller_score">
+        <view class='seller_score_item'>宝贝描述 {{sellerInfo.item_score}}
+          <text class="high" wx:if="{{sellerInfo.item_level==1}}">高</text>
+          <text class="ping" wx:elif="{{sellerInfo.item_level==0}}">平</text>
+          <text class="low" wx:else="{{sellerInfo.item_level==-1}}">低</text>
+        </view>
+        <view class='seller_score_item'>卖家服务 {{sellerInfo.service_score}}
+          <text class="high" wx:if="{{sellerInfo.service_level==1}}">高</text>
+          <text class="ping" wx:elif="{{sellerInfo.service_level==0}}">平</text>
+          <text class="low" wx:else="{{sellerInfo.service_level==-1}}">低</text>
+        </view>
+        <view class='seller_score_item'>物流服务 {{sellerInfo.delivery_score}}
+          <text class="high" wx:if="{{sellerInfo.delivery_level==1}}">高</text>
+          <text class="ping" wx:elif="{{sellerInfo.delivery_level==0}}">平</text>
+          <text class="low" wx:else="{{sellerInfo.delivery_level==-1}}">低</text>
+        </view>
+      </view>
+  </view>
+</template>

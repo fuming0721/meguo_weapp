@@ -1,0 +1,134 @@
+.cs_topBox {
+  width: 750rpx;
+  height: 640rpx;
+  background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533794902&di=e31427a636ab067e2ccd924fea7de1e0&imgtype=jpg&er=1&src=http%3A%2F%2Fp2.gexing.com%2FG1%2FM00%2FA3%2FD6%2FrBACE1PgXL2Tq-ZmAACLsCSNGLo828.jpg');
+}
+
+.cs_topBox_content_top {
+  width: 100%;
+  height: 440rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+  font-size: 36rpx;
+  position: relative;
+}
+
+.cs_topBox_content_top text {
+  font-size: 48rpx;
+}
+
+.topBoxSubTitle {
+  font-size: 24rpx;
+}
+
+.shopNav {
+  width: 100%;
+  height: 72rpx;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.shopNavItem {
+  width: 33%;
+  text-align: center;
+  color: #fff;
+  height: 100%;
+  line-height: 72rpx;
+}
+
+.shopNavItem_active {
+  color: #333;
+  background-image: url(data:image/png;base64,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);
+  background-position: inherit;
+  background-size: cover;
+}
+
+.cs_topBox_bottom {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  height: 200rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.cs_topBox_bottom_inputBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  border: 4rpx solid #ffa6aa;
+  border-radius: 12rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+.cs_topBox_bottom_input {
+  font-size: 26rpx;
+  height: 100%;
+  line-height: 80rpx;
+  padding: 0 80rpx 0rpx 20rpx;
+  color: #333;
+  flex-grow: 1;
+  background-color: #fff;
+}
+
+.inputHolder {
+  font-size: 26rpx;
+}
+
+.searchBtn {
+  width: 160rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+  background-color: #ff9ab5;
+  color: #fff;
+  border-radius: 0;
+}
+.searchBtn:active{
+  opacity: 0.8;
+}
+
+.delete{
+  position: absolute;
+  right: 160rpx;
+  font-size: 26rpx;
+  color: #000;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80rpx !important;
+  font-weight: bold;
+  width: 80rpx;
+  background-color: #fff;
+  border: none;
+  padding: 0;
+}
+.delete::after{
+  border: none;
+}
+
+.cs_topBox_form{
+  flex-grow: 1;
+}
+button[class="delete"]::after {
+  border: 0;
+} 
+.menuItem{
+    width: 187.5rpx;
+    height: 187.5rpx;
+}

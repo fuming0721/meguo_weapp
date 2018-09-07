@@ -1,0 +1,16 @@
+<!--小编说item -->
+<import src='./template/editorSayItem.wxml' />
+
+<scroll-view class='pageView' scroll-y="{{true}}" lower-threshold='100' bindscrolltolower='scrolltolower' enable-back-to-top='true'>
+  <block wx:for="{{editorSayList}}" wx:key="{{index}}">
+    <template is='editorSayItem' data='{{ ...item }}' />
+  </block>
+  <view class="weui-loadmore" wx:if='{{nextPage}}'>
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips mg_loading">正在加载...</view>
+  </view>
+
+  <view class="weui-loadmore weui-loadmore_line" wx:else>
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line mg_noMore">没有更多了</view>
+  </view>
+</scroll-view>

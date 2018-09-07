@@ -1,0 +1,61 @@
+/* pages/customerService/customerService.wxss */
+.customerServicePage{
+  padding: 40rpx 60rpx;
+}
+.title{
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.QRcode{
+  margin: 30rpx 0;
+  text-align: center;
+}
+.QRcode image{
+  width: 400rpx;
+}
+.searchText{
+  font-size: 26rpx;
+  color: #666;
+  padding: 0 60rpx;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.copyBox{
+  width: 600rpx;
+  height: 80rpx;
+  border: 4rpx solid #FB2833;
+  border-radius: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.wechatNum{
+  flex-grow: 1;
+  text-align: center;
+  color: #FB2833;
+  font-size: 28rpx;
+}
+.copyBtn{
+  width: 180rpx;
+  height: 100%;
+  background-color: #FB2833;
+  border-radius: 0 72rpx 72rpx 0;
+  flex-shrink: 0;
+  font-size: 26rpx;
+  color: #fff;
+  padding: 0;
+  line-height: 72rpx;
+}
+.copyBtn::after{
+  border: none;
+}
+.helpInfo{
+  margin-top: 60rpx;
+  color: #999;
+  font-size: 24rpx;
+}

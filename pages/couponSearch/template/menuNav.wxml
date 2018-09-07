@@ -1,0 +1,6 @@
+<import src='../../../common/menuItem/menuItem.wxml' />
+<template name='menuNav'>
+    <block wx:for="{{menuNavList}}" wx:key="{{index}}">
+        <template is="menuItem" data="{{...item}}" />
+    </block>
+</template>

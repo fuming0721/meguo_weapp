@@ -1,0 +1,18 @@
+<!--pages/category/category.wxml-->
+<!-- 二级分类图标List -->
+<import src='./template/subCategoryIconList.wxml' />
+<!-- 二级分类商品List -->
+<import src='./template/categoryGoodsList.wxml' />
+<!-- 分类页和二级分类页排序 -->
+<import src='/common/categoryNav/categoryNav' />
+
+<view class='categoryPage' style='height:{{pageScreenHeight}}px'>
+  <template is='subCategoryIconList' data='{{ afterIconArr, showMore, showminus }}' />
+
+  <view class='categoryGoodsBox'>
+    <template is='categoryNav' data='{{ sortname, sortCannel }}' />
+    <view class='categoryGoodsList'>
+      <template is='categoryGoodsList' data='{{ categoryGoodsList, nextPage, userInfo }}' />
+    </view>
+  </view>
+</view>

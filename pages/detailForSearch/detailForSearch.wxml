@@ -1,0 +1,36 @@
+<!--pages/detail/detail.wxml-->
+<!-- 详情页顶部 -->
+<import src='./template/detailTop_s.wxml' />
+<!-- 详情页商品内容 -->
+<import src='./template/detailContent_s.wxml' />
+<!-- 详情页底部分享购买 -->
+<import src='./template/buyBtn_s.wxml' />
+
+<!-- 详情页新品推荐 -->
+<import src='/pages/detail/template/newGoods.wxml' />
+<!-- 详情页淘口令弹窗 -->
+<import src='/pages/detail/template/taokouling.wxml' />
+
+<view>
+  <scroll-view class='detail' wx:if="{{flag}}" scroll-y="{{isScroll}}" scroll-into-view="{{toIndex}}" scroll-with-animation='true' lower-threshold='100' bindscrolltolower='scrolltolower' enable-back-to-top='true' bindscroll='myScroll'>
+    <template is='detailTop' data='{{ goodsData, couponamount }}'></template>
+    <template is='detailContent' data='{{ goodsData, isLoading, goodsImgArr, showMore }}'></template>
+    <template is='newGoodsList' data='{{ newGoodsListArr, nextPage }}'></template>
+  </scroll-view>
+
+  <view class='bottomBtnBox'>
+    <template is='buy' data='{{ goodsData, canShare }}'></template>
+  </view>
+
+  <navigator style='bottom:{{backHomePosition}}px' open-type="switchTab" url='/pages/index/index' class='leftIcon toHome'>
+    <icon class='iconfont jdd-daohangshouye home_icon'></icon>
+  </navigator>
+
+  <view class='leftIcon backTop' bindtap='backToTop' animation="{{backTopAnimation}}">
+    <icon class='iconfont jdd-top home_icon'></icon>
+  </view>
+
+  <view class='taokouling'  animation="{{animationData}}">
+    <template is='taokouling' data='{{ newGoodsListArr, taokouling }}'></template>
+  </view>
+</view>

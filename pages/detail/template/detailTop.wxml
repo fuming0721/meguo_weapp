@@ -1,0 +1,41 @@
+<wxs src="../../../filter/filter.wxs" module="filter" />
+<template name='detailTop'>
+  <view class='detail_top_box' id='detail_top'>
+    <swiper wx:if="{{goodsData.cover_pic.length}}" indicator-dots="true" indicator-active-color="#fff" autoplay="true" circular="true" class='detail_top_imgBox'>
+      <block wx:for="{{goodsData.cover_pic}}" wx:key="{{index}}">
+        <swiper-item class='bannerItem imgBox'>
+            <image class='detail_top_img' src='{{item}}' lazy-load="true" mode="widthFix"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='detail_top_imgBox' wx:else>
+      <image class='detail_top_img' src='{{ goodsData.thread_img }}' mode='widthFix'></image>
+    </view>
+
+    <view class='detail_top_title'>
+      <text class='detail_top_source'>{{filter.getShopSource(goodsData.threadsGoods.mall_id)}}</text> {{goodsData.title}}
+    </view>
+
+    <view class='detail_price_box'>
+      <text class='detail_quanhou'>券后价</text>￥
+      <text class='detail_price'>{{filter.formatMoney(goodsData.threadsGoods.price)}}</text>
+    </view>
+
+    <view class='detail_subinfo'>
+      <view>{{filter.getShopSource(goodsData.threadsGoods.mall_id)}}价
+        <text class='detail_orprice'>￥{{filter.formatMoney(goodsData.threadsGoods.origin_price)}}</text>
+      </view>
+      <view>运费:包邮</view>
+      <view>销量:{{filter.over10000(goodsData.threadsGoods.volume)}}</view>
+    </view>
+
+    <view class='detail_coupon' bindtap='showTaokouling' wx:if="{{goodsData.coupons}}">
+      <view class='detail_coupon_left'>
+        <view class='detail_coupon_yuan'>{{goodsData.coupons.coupon_price}}元优惠券</view>
+        <view class='detail_coupon_time'>使用期限：{{filter.DateFr(goodsData.coupons.start_time)}}-{{filter.DateFr(goodsData.coupons.end_time)}}</view>
+      </view>
+      <view class='detail_coupon_right'>点击领取</view>
+    </view>
+
+  </view>
+</template>

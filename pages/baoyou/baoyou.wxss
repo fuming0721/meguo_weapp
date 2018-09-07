@@ -1,0 +1,102 @@
+/* pages/baoyou/baoyou.wxss */
+
+.baoyouPage {
+  background-color: #f2f2f2;
+  height: 100%;
+}
+
+.baoyoutopSearch {
+  height: 80rpx;
+  width: 100%;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.baoyoutop {
+  height: 470rpx;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+  background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533794902&di=e31427a636ab067e2ccd924fea7de1e0&imgtype=jpg&er=1&src=http%3A%2F%2Fp2.gexing.com%2FG1%2FM00%2FA3%2FD6%2FrBACE1PgXL2Tq-ZmAACLsCSNGLo828.jpg')
+}
+
+.topsearchInput {
+  background-color: #fff;
+}
+
+.baoyouTopimgBox {
+  height: 360rpx;
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20rpx;
+  box-sizing: border-box;
+  padding-bottom: 0;
+  position: absolute;
+  top: 90rpx;
+}
+
+.baoyouTopImg {
+  width: 225rpx;
+  display: block;
+  background-color: #fff;
+}
+
+.baoyouToUrl {
+  width: 225rpx;
+  overflow: hidden;
+  height: 150rpx;
+}
+
+.baoyouNav {
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.baoyouNavitem {
+  width: 150rpx;
+  text-align: center;
+  font-size: 28rpx;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  box-sizing: border-box;
+  background-color: #fff;
+  height: 80rpx;
+  line-height: 79rpx;
+}
+
+.nav_active {
+  background-color: #f23c4e;
+  color: #fff;
+  position: relative;
+  border-top: 1px solid #f23c4e;
+  border-bottom: 1px solid #f23c4e;
+  box-sizing: border-box;
+}
+.nav_active::before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 7px 0;
+  border-color: #f23c4e transparent transparent;
+  bottom: -7px;
+  left: 50%;
+  margin-left: -7px;
+}
+.baoyou_goodList{
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #f2f2f2;
+  padding: 0 14rpx;
+  box-sizing: border-box;
+}

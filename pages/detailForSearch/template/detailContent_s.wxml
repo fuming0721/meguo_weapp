@@ -1,0 +1,23 @@
+<template name='detailContent'>
+  <view class='detailContent_box'>
+    <view class='detail_box_title' id='detail_content'>—— 图文详情 ——</view>
+    <view class='detail_content'>
+      <rich-text class='detail_content_submsg' nodes="{{goodsData.content}}"></rich-text>
+
+      <view class='detail_content_imgbox' wx:if="{{showMore}}">
+        <block wx:for='{{goodsData.small_images.string}}' wx:key='{{index}}'>
+          <image class='moreImg imgBox' src='{{item}}' mode='widthFix' lazy-load='true'></image>
+        </block>
+      </view>
+
+      <view class='detail_seeMoreBtn'>
+        <button wx:if='{{!showMore}}' class='detail_content_seemore weui-btn' type="default" size='mini' loading='{{isLoading}}' bindtap='loadMoreImg'>
+          <text>点击查看商品详情</text>
+        </button>
+        <button wx:else class='detail_content_seemore weui-btn' type="default" size='mini' bindtap='closeMore'>
+          <text>点击收起</text>
+        </button>
+      </view>
+    </view>
+  </view>
+</template>

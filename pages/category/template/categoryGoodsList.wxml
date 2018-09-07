@@ -1,0 +1,17 @@
+<import src='/common/goodsListItem/goodsListItem.wxml' />
+<template name='categoryGoodsList'>
+  <view class='category_goodList'>
+    <block wx:for="{{categoryGoodsList}}" wx:key="{{index}}">
+      <template is="goodsItem" data="{{...item, userInfo}}" />
+    </block>
+
+    <view class="weui-loadmore" wx:if='{{nextPage}}'>
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips mg_loading">正在加载...</view>
+    </view>
+
+    <view class="weui-loadmore weui-loadmore_line" wx:else>
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line mg_noMore">没有更多了</view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,9 @@
+<template name='activeList'>
+  <view class='baoyouTopimgBox' style='back'>
+    <block wx:for="{{randomADlist}}" wx:key="{{index}}">
+      <view class='baoyouToUrl imgBox' bindtap='toSubCategory' data-path='{{item.path}}' data-page='{{item.page}}'>
+        <image class='baoyouTopImg' src='{{item.picUrl}}' mode="widthFix"></image>
+      </view>
+    </block>
+  </view>
+</template>

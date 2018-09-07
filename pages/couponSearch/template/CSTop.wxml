@@ -1,0 +1,32 @@
+<template name='CS_top'>
+  <view class='cs_topBox'>
+    <view class='cs_topBox_content_top'>
+      <view>今日发现
+        <text>{{conpunNum}}</text> 张优惠券</view>
+      <view class='topBoxSubTitle'>—— 买前先搜券，购物更划算 ——</view>
+
+      <view class='shopNav'>
+        <block wx:for="{{shopArr}}" wx:key="{{index}}">
+          <view bindtap='changeShop' data-shopIndex='{{item.index}}' class='shopNavItem {{item.index==shopIndex?"shopNavItem_active":""}}'>{{item.name}}</view>
+        </block>
+      </view>
+    </view>
+
+
+
+    <view class='cs_topBox_bottom'>
+      <view class='cs_topBox_bottom_inputBox'>
+        <form class='cs_topBox_form' bindreset="clearValue">
+          <input class='cs_topBox_bottom_input' placeholder="输入关键词或粘贴商品标题" type='text' placeholder-class="inputHolder" bindinput="model"/>
+          <button class='iconfont jdd-cuo delete' formType="reset" wx:if="{{haveValue}}"></button>
+        </form>
+
+        <view class='searchBtn' bindtap='startSearch'>搜索</view>
+
+      </view>
+    </view>
+
+
+
+  </view>
+</template>

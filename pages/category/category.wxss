@@ -1,0 +1,67 @@
+/* pages/category/category.wxss */
+@import '/common/categoryNav/categoryNav.wxss';
+.categoryPage{
+  background-color: #f2f2f2;
+  height: 100%;
+}
+
+.subCategoryIconList {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.menuItem {
+  width: 177rpx;
+  height: 177rpx;
+}
+
+.menuItem_text {
+  margin-top: 10rpx;
+}
+.iconBox{
+  width: 90rpx;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cateMore {
+  color: #fff;
+  width: 50rpx;
+  height: 50rpx;
+  box-sizing: border-box;
+  background-color: #e53939;
+  border-radius: 50%;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cateMore_text {
+  font-size: 22rpx;
+  margin-top: 10rpx;
+}
+
+.showAllIcon .cateMore {
+  transform: rotate(180deg);
+  padding-right: 4rpx;
+}
+
+.categoryGoodsBox{
+  background-color: #f2f2f2;
+}
+
+.category_goodList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #f2f2f2;
+  padding: 0 14rpx;
+  box-sizing: border-box;
+}

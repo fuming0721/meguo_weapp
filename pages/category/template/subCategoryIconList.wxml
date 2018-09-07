@@ -1,0 +1,21 @@
+<import src='/common/menuItem/menuItem.wxml' />
+
+<template name='subCategoryIconList'>
+  <view class='subCategoryIconList'>
+    <block wx:for="{{afterIconArr}}" wx:key="{{index}}">
+      <template is="menuItem" data="{{...item}}" />
+    </block>
+    <view class='menuItem showAllIcon' wx:if="{{showMore}}" bindtap='showAllIcon'>
+      <view class='iconBox'>
+        <view class='iconfont jdd-fanhui cateMore'></view>
+      </view>
+      <text class='cateMore_text'>展开</text>
+    </view>
+    <view class='menuItem hidesomeIcon' wx:if="{{showminus}}" bindtap='hideSomeIcon'>
+      <view class='iconBox'>
+        <view class='iconfont jdd-fanhui cateMore'></view>
+      </view>
+      <text class='cateMore_text'>收起</text>
+    </view>
+  </view>
+</template>

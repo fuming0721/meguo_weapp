@@ -1,0 +1,6 @@
+<template name='taokouling'>
+    <view>{{taokouling}}</view>
+    <button class="weui-btn mini-btn" type="default" size="mini" bindtap='copyTKL'>点击复制</button>
+    <button class="weui-btn mini-btn" type="default" size="mini" bindtap='closeTaokouling'>关闭</button>
+    <button bindtap='onShareAppMessage' open-type="share">分享</button>
+</template>

@@ -1,0 +1,45 @@
+/* pages/exchangeRecord/exchangeRecord.wxss */
+.noRecord{
+  height: 750rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 30rpx;
+  color: #999;
+}
+.noRecord image{
+  width: 50%;
+  margin-bottom: 40rpx;
+}
+.recordItem{
+  height: 120rpx;
+  border-top: 2rpx solid #f2f2f2;
+  background-color: #fff;
+  padding: 20rpx 20rpx 10rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.item_top, .item_bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item_title{
+  font-size: 28rpx;
+  color: #333;
+}
+.item_time{
+  font-size: 24rpx;
+  color: #999;
+}
+.item_num{
+  font-size: 24rpx;
+  color: #666;
+}
+.item_money{
+  font-size: 24rpx;
+  color: #F23C4E;
+}

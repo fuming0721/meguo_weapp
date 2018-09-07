@@ -1,0 +1,23 @@
+<!--pages/album/album.wxml-->
+<import src='/common/goodsListItem/goodsListItem.wxml' />
+<view class='albumPage'>
+  <view class='cover_img_box imgBox' wx:if="{{coverImg !='null'}}">
+    <image class='cover_img' src='{{coverImg}}' mode='widthFix'></image>
+  </view>
+
+
+  <view class='album_goodList'>
+    <block wx:for="{{albumList}}" wx:key="{{index}}">
+      <template is="goodsItem" data="{{...item, userInfo}}" />
+    </block>
+
+    <view class="weui-loadmore" wx:if='{{nextPage}}'>
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips mg_loading">正在加载...</view>
+    </view>
+
+    <view class="weui-loadmore weui-loadmore_line" wx:else>
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line mg_noMore">没有更多了</view>
+    </view>
+  </view>
+</view>
