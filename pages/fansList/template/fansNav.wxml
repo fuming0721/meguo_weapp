@@ -1,0 +1,11 @@
+<template name='fansNav'>
+
+  <view class='fansNav'>
+    <block wx:for="{{fansNav}}" wx:key="{{index}}">
+      <view class="navBtn {{fansNavIndex == index?'current':''}}" bindtap='navChange' data-index='{{index}}'>
+        {{item}}
+      </view>
+    </block>
+  </view>
+
+</template>

@@ -1,0 +1,34 @@
+<wxs src="../../../filter/filter.wxs" module="filter" />
+<template name='fansItem'>
+  <view class='fansItem'>
+    <view class='fansIcon userIconBox'>
+      <image mode='widthFix' src='{{user_info.avatar}}'></image>
+    </view>
+
+    <view class='fansInfo'>
+      <view class='fansInfo_top'>
+        <text class='userName'>{{user_info.username}}</text>
+        <navigator url="{{'../fansDetail/fansDetail?uid=' + user_info.id+'&title=' + user_info.username}}" wx:if="{{commend_num>0 && isFirst}}" class='recommendNum'>
+          推荐{{commend_num}}人
+          <text class='navRight iconfont jdd-right'></text>
+        </navigator>
+        
+        <view wx:if="{{commend_num>0 && isSec}}" class='recommendNum'>推荐{{commend_num}}人</view>
+      </view>
+
+      <view class='fansInfo_bottom'>
+        <view class='svip' wx:if="{{is_super==1}}">
+          <view class='iconfont sVipicon jdd-zuanshi'></view> 超级会员
+        </view>
+
+        <view class='vip' wx:else>
+          <view class='iconfont commonVipicon jdd-zuanshi'></view> 普通会员
+        </view>
+
+        <view class='add_time'>
+          {{ filter.DateFr(add_time) }}
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -24,3 +24,45 @@ page{
   background-size: cover;
   background-position: center center;
 }
+.userIconBox{
+  background-image: url("http://images.meguo.com/user/avatar/default.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.vip {
+  font-size: 20rpx;
+  border: 2rpx solid #333;
+  color: #333;
+  background-color: #fff;
+  border-radius: 40rpx;
+  height: 26rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 26rpx;
+  padding: 0 15rpx;
+}
+.svip{
+  font-size: 20rpx;
+  border: 2rpx solid #2F2F2F;
+  color: #FCC321;
+  background-color: #2F2F2F;
+  border-radius: 40rpx;
+  height: 26rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 26rpx;
+  padding: 0 15rpx;
+}
+.commonVipicon {
+  font-size: 20rpx;
+  color: #333;
+  margin-right: 4rpx;
+}
+.sVipicon{
+  font-size: 20rpx;
+  color: #FCC321;
+  margin-right: 4rpx;
+}

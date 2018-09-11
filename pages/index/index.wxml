@@ -28,7 +28,7 @@
   </view>
 
   <view class='featuredList'>
-    <template is='featured' data='{{ featuredList, haveMore, userInfo }}' />
+    <template is='featured' data='{{ featuredList, nextpage, userInfo }}' />
   </view>
 
 </view>

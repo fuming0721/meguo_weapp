@@ -1,0 +1,105 @@
+/* pages/fansList/fansList.wxss */
+.myFansPage{
+  padding-top: 80rpx;
+  box-sizing: border-box;
+}
+.fansNav{
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+.navBtn{
+  width: 33%;
+  height: 100%;
+  font-size: 28rpx;
+  text-align: center;
+  color: #333;
+  box-sizing: border-box;
+  line-height: 80rpx;
+}
+.navBtn.current{
+  border-bottom: 4rpx solid #f35;
+}
+.noFans{
+  width: 750rpx;
+  height: 750rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.noFans image{
+  width: 120rpx;
+}
+.aiyo{
+  font-size: 26rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #999;
+}
+.invFriends{
+  color: #e53939;
+  margin-top: 60rpx;
+  font-size: 26rpx;
+}
+.fansItem{
+  height: 140rpx;
+  margin-bottom: 2rpx;
+  background-color: #fff;
+  padding: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+.fansIcon{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100rpx;
+  overflow: hidden; 
+}
+.fansIcon image{
+  width: 100rpx;
+}
+.fansInfo{
+  flex-grow: 1;
+  height: 100%;
+  margin-left: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.fansInfo_top, .fansInfo_bottom{
+  /* height: 50%; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.userName{
+  font-size: 30rpx;
+  color: #333;
+}
+.recommendNum{
+  font-size: 24rpx;
+  color: #e53939;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add_time{
+  font-size: 24rpx;
+  color: #999;
+}
+.navRight{
+  font-size: 24rpx;
+  color: #999;
+  line-height: 48rpx;
+}

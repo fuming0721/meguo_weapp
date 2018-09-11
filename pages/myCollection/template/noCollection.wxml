@@ -1,0 +1,7 @@
+<template name='noCollection'>
+  <view class='noprint'>
+    <image class='myFoot' mode='widthFix' src='/images/none_mycollectionx.png'></image>
+    <text class='nofootText'>你还没有收藏宝贝</text>
+    <navigator class='backHome' open-type='switchTab' url="/pages/index/index">返回首页</navigator>
+  </view>
+</template>

@@ -1,0 +1,24 @@
+<template name='share'>
+  <view class='bottom'>
+    <button class='copy' bindtap='cpoyCode'>复制邀请码</button>
+    <button class='share' bindtap='showTaokouling' disabled='{{disableShareBtn}}'>分享专属海报</button>
+  </view>
+  <view class='saveImgBox' animation="{{animationData}}" style="height:{{shareHeight}}">
+    <view class='saveImgPane'>
+
+      <view class='saveImgBox-top'>
+        <view class='top_title'>分享专属海报</view>
+        <view bindtap='closeShare' class='iconfont jdd-cuo'></view>
+      </view> 
+
+      <view class='shareImg_main'>
+        <image class='current_share_img' src='{{currentShareImg}}' mode="aspectFit"></image>
+      </view>
+
+      <view class='share_info'>
+        <button class='save_img_btn' type='warn' bindtap='saveImg'>保存图片</button>
+        <view class='share_info_w'>保存图片到手机后，您可以发送您的专属海报发送给朋友</view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,7 +1,6 @@
 // prod
 const baseUrl = "https://m.meguo.com";
 
-// dev
 // const baseUrl = "https://m.dev.develop.miguo.cn";
 const wxRequst = (params, url) => {
   wx.request({
@@ -49,12 +48,16 @@ const getDetailNewGoods = parmas => {
   wxRequst(parmas, baseUrl + '/api/threads/hot')
 };
 // 获取详情页点赞和收藏状态
-const getDetailLikeInfo = parmas => {
-  wxRequst(parmas, baseUrl + '/api/threads/detail-extension')
+const getDetailLikeInfo = (parmas, tokenPros) => {
+  wxRequst(parmas, baseUrl + '/api/wx-mini-program/detail-extension' + tokenPros)
 };
 // 详情页点赞
 const prosLike = parmas => {
   wxRequst(parmas, baseUrl + '/api/threads/rating')
+};
+// 详情页收藏
+const collect = (parmas, tokenPros) => {
+  wxRequst(parmas, baseUrl + '/api/wx-mini-program/favorite' + tokenPros)
 };
 // 获取淘口令
 const getTaokouling = parmas => {
@@ -128,6 +131,22 @@ const getAgentBalanceList = (parmas) => {
 const getOrderList = (parmas) => {
   wxRequst(parmas, baseUrl + '/api/wx-mini-program/agent-orders?access_token=' + wx.getStorageSync('access_token'))
 };
+// 我的粉丝
+const myFansList = (parmas) => {
+  wxRequst(parmas, baseUrl + '/api/wx-mini-program/agent-fans?access_token=' + wx.getStorageSync('access_token'))
+};
+// 二级粉丝
+const fansDetailList = (parmas) => {
+  wxRequst(parmas, baseUrl + '/api/wx-mini-program/commend-fans?access_token=' + wx.getStorageSync('access_token'))
+};
+// 收藏
+const myCollectionList = (parmas) => {
+  wxRequst(parmas, baseUrl + '/api/wx-mini-program/favorites-lists?access_token=' + wx.getStorageSync('access_token'))
+};
+// 邀请好友的图片
+const getInvitationImg = (parmas) => {
+  wxRequst(parmas, baseUrl + '/api/wx-mini-program/invitation-img?access_token=' + wx.getStorageSync('access_token'))
+};
 
 module.exports = {
   getBannerImg,
@@ -138,6 +157,7 @@ module.exports = {
   getDetailNewGoods,
   getDetailLikeInfo,
   prosLike,
+  collect,
   getTaokouling,
   getSubCategoryIcon,
   getGuessYoulike,
@@ -155,5 +175,9 @@ module.exports = {
   goldExchangeRecord,
   orderTrack,
   getAgentBalanceList,
-  getOrderList
+  getOrderList,
+  myFansList,
+  fansDetailList,
+  myCollectionList,
+  getInvitationImg
 }

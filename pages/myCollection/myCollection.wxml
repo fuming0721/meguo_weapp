@@ -1,2 +1,14 @@
-<!--pages/myCollection/myCollection.wxml-->
-<text>pages/myCollection/myCollection.wxml</text>
+<!-- 有收藏 -->
+<import src='./template/myCollectionList.wxml' />
+<!-- 没有收藏 -->
+<import src='./template/noCollection.wxml' />
+
+<view class='myCollectionPage'>
+  <block wx:if="{{haveCollection}}">
+    <template is='myCollectionList' data="{{collectionList, nextPage, nowDate}}"></template>
+  </block>
+
+  <block wx:else>
+    <template is='noCollection'></template>
+  </block>
+</view>

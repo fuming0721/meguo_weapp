@@ -30,11 +30,23 @@ Page({
     taokouling: "获取中...", // 淘口令
     canShare: false, //能否分享
     backHomePosition: sysInfo.screenHeight * 0.2, //返回首页的按钮位置
-    userInfo: null
+    userInfo: null,
+    accessToken: ''   //在没有登录没有Token的情况下不能附加在url上
   },
 
   // 生命周期函数--监听页面加载
   onLoad(options) {
+    try {
+      var token = wx.getStorageSync('access_token')
+      if (token) {
+        this.setData({
+          accessToken: `?access_token=${token}`
+        })
+      }
+    } catch (e) {
+      console.log(e)
+    }
+
     this.setData({
       flagNum: Math.random().toString(36).substr(2),
       userInfo: getApp().globalData.userInfo,
@@ -246,7 +258,7 @@ Page({
           sellerIcon: sellerIcon
         })
       }
-    })
+    }, this.data.accessToken)
   },
 
   // 点赞
@@ -256,29 +268,87 @@ Page({
         tid: this.data.goodsData.id
       },
       success: (res) => {
-        if (res.data.success) {
-          wx.showToast({
-            icon: 'success',
-            title: res.data.message,
-            duration: 2000
-          })
-          this.setData({
-            isLiked: true
-          })
-        } else {
+        wx.showToast({
+          icon: 'none',
+          title: res.data.message,
+          duration: 2000
+        })
+        res.data.success ? this.setData({
+          isLiked: true
+        }) : this.setData({
+          isLiked: false
+        })
+      }
+    })
+  },
+
+  // 收藏
+  collectGoods() {
+    api.collect({
+      data: {
+        tid: this.data.goodsData.id
+      },
+      success: res => {
+        if (res.data.code) {
+          // 关注成功
+          if (res.data.success && res.data.code == 1001) {
+            wx.showToast({
+              icon: 'success',
+              title: res.data.message,
+              duration: 2000
+            })
+            this.setData({
+              isCollect: true
+            })
+          }
+          // 取消关注 
+          else if (res.data.success && res.data.code == 1002) {
+            wx.showToast({
+              icon: 'success',
+              title: res.data.message,
+              duration: 2000
+            })
+            this.setData({
+              isCollect: false
+            })
+          }
+          // 未登录
+          else {
+            this.setData({
+              isCollect: false
+            });
+            wx.showModal({
+              title: '温馨提示',
+              content: `${res.data.message} 现在去登录？`,
+              confirmText: '去登录',
+              confirmColor: "#f35",
+              success: res => {
+                res.confirm ? wx.switchTab({
+                  url: '/pages/my/my',
+                }) : ''
+              }
+            })
+          }
+        }
+        // 取消或者关注失败
+        else {
           wx.showToast({
             icon: 'none',
             title: res.data.message,
             duration: 2000
           })
-          this.setData({
-            isLiked: false
-          })
         }
       }
+    }, this.data.accessToken)
+  },
+  // 包装wx.showToast
+  showToast(value) {
+    wx.showToast({
+      icon: 'none',
+      title: value,
+      duration: 2000
     })
   },
-
   // 监听图片加载
   imageLoad(e) {
     this.setData({

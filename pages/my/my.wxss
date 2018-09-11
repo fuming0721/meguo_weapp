@@ -85,36 +85,9 @@
   font-size: 32rpx;
   color: #fff;
   font-weight: bold;
+  margin-right: 20rpx;
 }
 
-.vip {
-  font-size: 20rpx;
-  border: 2rpx solid #333;
-  color: #333;
-  background-color: #fff;
-  border-radius: 40rpx;
-  height: 26rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 26rpx;
-  padding: 0 20rpx;
-  margin-left: 20rpx;
-}
-.svip{
-  font-size: 20rpx;
-  border: 2rpx solid #2F2F2F;
-  color: #FCC321;
-  background-color: #2F2F2F;
-  border-radius: 40rpx;
-  height: 26rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 26rpx;
-  padding: 0 20rpx;
-  margin-left: 20rpx;
-}
 .userCode {
   display: flex;
   justify-content: flex-start;
@@ -143,16 +116,6 @@ copyBtn::after {
   border: none;
 }
 
-.commonVipicon {
-  font-size: 20rpx;
-  color: #333;
-  margin-right: 4rpx;
-}
-.sVipicon{
-  font-size: 20rpx;
-  color: #FCC321;
-  margin-right: 4rpx;
-}
 .setting{
   position: absolute;
   right: 40rpx;

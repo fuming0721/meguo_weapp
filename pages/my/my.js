@@ -18,7 +18,7 @@ Page({
         icon: 'iconfont jdd-fans',
         name: '我的粉丝',
         bgcolor: '#F7A1A1',
-        page: "/pages/fansList/fansList"
+        page: "/pages/fansList/myFans/myFans"
       },
       {
         icon: 'iconfont jdd-yaoqing',
@@ -162,7 +162,6 @@ Page({
   // 我的服务页面跳转
   pageJump(e) {
     let pageName = e.currentTarget.dataset.pagename
-    console.log(pageName)
     if (pageName == '/pages/myCollection/myCollection' && !this.data.userInfo) {
       wx.showModal({
         title: '提示',

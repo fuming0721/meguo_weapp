@@ -1,0 +1,32 @@
+<!-- nav -->
+<import src='../template/fansNav' />
+<!-- list -->
+<import src='../template/fansItem' />
+
+<view class='myFansPage'>
+  <template is='fansNav' data="{{ fansNav, fansNavIndex }}"></template>
+
+  <view class='myFansList'>
+    <view class='myFansList_have' wx:if="{{haveFans}}">
+      <block wx:for="{{fansList}}" wx:key="{{index}}">
+        <template is="fansItem" data="{{...item, isFirst}}" />
+      </block>
+
+      <view class="weui-loadmore" wx:if='{{nextPage}}'>
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips mg_loading">正在加载...</view>
+      </view>
+
+      <view class="weui-loadmore weui-loadmore_line" wx:else>
+        <view class="weui-loadmore__tips weui-loadmore__tips_in-line mg_noMore">没有更多了</view>
+      </view>
+    </view>
+
+    <view class='noFans' wx:else>
+      <image mode='widthFix' src='/images/ohNo.png'></image>
+      <view class='aiyo'>哎哟，这里还没有小伙伴哦</view>
+      <navigator url='/pages/inviteFriends/inviteFriends' class='invFriends'>（立即邀请好友）</navigator>
+    </view>
+
+  </view>
+</view>

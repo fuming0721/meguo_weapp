@@ -1,0 +1,19 @@
+<!-- 列表item -->
+<import src='./myCollectionListItem.wxml' />
+<wxs src="../../../filter/filter.wxs" module="filter" />
+<template name='myCollectionList'>
+  <view class='myCollectionList'>
+    <block wx:for="{{collectionList}}" wx:key="{{index}}">
+      <template is='myCollectionListItem' data="{{...item, nowDate}}"></template>
+    </block>
+
+    <view class="weui-loadmore" wx:if='{{nextPage}}'>
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips mg_loading">正在加载...</view>
+    </view>
+
+    <view class="weui-loadmore weui-loadmore_line" wx:else>
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line mg_noMore">没有更多了</view>
+    </view>
+  </view>
+</template>

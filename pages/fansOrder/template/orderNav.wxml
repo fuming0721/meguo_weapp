@@ -1,4 +1,5 @@
 <template name='orderNav'>
+
   <view class='orderNavBox'>
     <view class='orderNav'>
       <block wx:for="{{navList}}" wx:key="{{index}}">

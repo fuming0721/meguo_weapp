@@ -1,2 +1,2 @@
 <!--pages/help/help.wxml-->
-<text>pages/help/help.wxml</text>
+<web-view src="https://m.meguo.com/help?channel=2"></web-view>

@@ -1,1 +1,2 @@
 /* pages/myCollection/myCollection.wxss */
+@import '/pages/footprint/footprint';

@@ -13,8 +13,7 @@ Page({
     homeCheapList: [], //首页9.9包邮
     editorSayList: [], //首页小编种草
     featuredList: [], //首页今日精选,
-    featuredNestpage: 1, //首页今日精选的下一页数,
-    haveMore: true, //首页今日精选能否翻页
+    nextpage: 1, //首页今日精选的下一页数,
     userInfo: null
   },
 
@@ -109,15 +108,14 @@ Page({
       data: {
         channel: 5,
         cid: 0,
-        page: this.data.featuredNestpage
+        page: this.data.nextpage
       },
       success: (res) => {
         let nextPage = res.data.result.pagination.current_page + 1 > res.data.result.pagination.page_count ? false : res.data.result.pagination.current_page + 1;
         let haveMoreData = nextPage == 'false' ? false : true;
         this.setData({
           featuredList: this.data.featuredList.concat(res.data.result.articals),
-          featuredNestpage: nextPage,
-          haveMore: haveMoreData
+          nextpage: nextPage
         })
         wx.hideToast()
       }
@@ -142,12 +140,6 @@ Page({
   },
 
   /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
-  },
-  /**
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
@@ -157,31 +149,10 @@ Page({
   },
 
   /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom() {
-    this.data.haveMore ? this.getFeaturedList() : ''
+    this.data.nextpage ? this.getFeaturedList() : ''
   },
 
   /**

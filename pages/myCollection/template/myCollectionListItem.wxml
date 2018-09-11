@@ -1,0 +1,21 @@
+<wxs src="../../../filter/filter.wxs" module="filter" />
+<template name='myCollectionListItem'>
+  <navigator url='/pages/detail/detail?id={{tid}}' class='printListItem'>
+    <view class='itemLeft'>
+      <image class='itemLeftImg' mode='widthFix' src="{{threads.thread_img}}"></image>
+    </view>
+    <view class='itemRight'>
+      <view class='itemRight_title'>{{threads.title}}</view>
+      <text class='itemRight_price'>￥{{filter.formatMoney(extension.price)}}</text>
+      <view class='itemRight_bottom'>
+        <view class='volume'>
+          <text>{{filter.getShopSource(extension.mall_id)}}</text>
+          <text class='line'>|</text>
+          <text>{{extension.volume}}已抢购</text>
+        </view>
+        <view class='created_time'>{{filter.formatDate(created_time)}}</view>
+      </view>
+    </view>
+    <image wx:if="{{nowDate-threads.end_time>=0}}" class='invalid' mode='widthFix' src='/images/invalid.png'></image>
+  </navigator>
+</template>

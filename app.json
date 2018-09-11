@@ -20,10 +20,11 @@
     "pages/orderTrack/orderTrack",
     "pages/inviteFriends/inviteFriends",
     "pages/fansOrder/fansOrder",
-    "pages/fansList/fansList",
+    "pages/fansList/myFans/myFans",
     "pages/help/help",
     "pages/myCollection/myCollection",
-    "pages/goldDetailList/goldDetailList"
+    "pages/goldDetailList/goldDetailList",
+    "pages/fansList/fansDetail/fansDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

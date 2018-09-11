@@ -6,7 +6,7 @@
       <template is="goodsItem" data="{{...item, userInfo}}"/>
     </block>
 
-    <view class="weui-loadmore" wx:if='{{haveMore}}'>
+    <view class="weui-loadmore" wx:if='{{nextpage}}'>
       <view class="weui-loading"></view>
       <view class="weui-loadmore__tips mg_loading">正在加载...</view>
     </view>

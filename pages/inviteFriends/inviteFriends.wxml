@@ -1,2 +1,18 @@
 <!--pages/inviteFriends/inviteFriends.wxml-->
-<text>pages/inviteFriends/inviteFriends.wxml</text>
+<!-- 轮播 -->
+<import src='./template/swiper.wxml' />
+<!-- 图片保存 -->
+<import src='./template/share.wxml' />
+
+<view class='inviteFriendsPage'>
+  <view class='invite_title'>微信分享专属海报，新用户可免费邀请注册，关系自动绑定</view>
+  <template is='swiper' data='{{ imgArr, currentIndex }}' />
+  <view class='invite_des'>
+    <text class='invite_des_title'>邀请规则</text>
+    <text>1.专属海报中的二维码已包含您的邀请码信息；</text>
+    <text>2.好友通过您的二维码海报下载APP并注册成为聚多多代理后，Ta即永久成为您的代理，未来Ta领券下单时产生的奖励收入均计入您的账户中；</text>
+    <text>3.您的代理领券下单并确认收货后，您将获得100%消费佣金；</text>
+  </view>
+
+  <template is='share' data='{{ animationData, shareHeight, disableShareBtn, currentShareImg }}' />
+</view>

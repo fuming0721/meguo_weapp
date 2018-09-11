@@ -38,6 +38,10 @@
   padding: 0 6rpx;
 }
 
+.collected {
+  color: #f23c4e !important;
+}
+
 .bottomBtnBox {
   display: flex;
   justify-content: space-between;
@@ -69,7 +73,8 @@
   align-items: center;
   margin: 0;
 }
-.share_btn{
+
+.share_btn {
   width: 200rpx;
   margin: 0;
   height: 60rpx;
@@ -78,13 +83,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FFBB33;
+  background-color: #fb3;
   color: #fff;
 }
 
-.share_btn::after, .buy_btn::after{
+.share_btn::after, .buy_btn::after {
   border: none;
 }
+
 .buy_like_collect {
   display: flex;
   justify-content: flex-start;
@@ -381,7 +387,7 @@
   font-size: 20rpx;
 }
 
-.taokouling{
+.taokouling {
   width: 100%;
   position: fixed;
   z-index: 999;
@@ -394,14 +400,15 @@
   align-items: center;
   flex-direction: column;
 }
-.btg{
+
+.btg {
   height: 60rpx !important;
   line-height: 60rpx !important;
   font-size: 26rpx !important;
-  background-color: #F8F8F8 !important;
-  border-radius:5px !important;
+  background-color: #f8f8f8 !important;
+  border-radius: 5px !important;
 }
 
-.mg-desContent-item-img{
+.mg-desContent-item-img {
   width: 670rpx;
 }
