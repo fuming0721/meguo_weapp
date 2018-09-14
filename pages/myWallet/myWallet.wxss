@@ -1,1 +1,169 @@
 /* pages/myWallet/myWallet.wxss */
+
+.head {
+  height: 360rpx;
+  background-color: #fd7274;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.Balance {
+  font-size: 24rpx;
+}
+
+.money {
+  font-size: 56rpx;
+}
+
+.withdrawNow {
+  font-size: 24rpx !important;
+  color: #666;
+  height: 48rpx;
+  border-radius: 48rpx;
+  width: 200rpx;
+  line-height: 48rpx;
+  margin-top: 10rpx;
+}
+
+.totleMoney {
+  font-size: 24rpx;
+  margin: 20rpx 0;
+}
+
+.quanquan {
+  position: absolute;
+  bottom: -180rpx;
+  width: 500rpx;
+  height: 500rpx;
+  border: 2rpx solid #fff;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.nav {
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  width: 750rpx;
+}
+
+.navItem {
+  height: 80rpx;
+  width: 50%;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #f2f2f2;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.navItem.current {
+  border-color: #f35;
+}
+
+.noList {
+  height: 700rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.noList image {
+  width: 20%;
+  margin-bottom: 40rpx;
+}
+
+.incomeItem {
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 2rpx solid #f2f2f2;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 10rpx 20rpx;
+}
+
+.incomeItem_top, .incomeItem_bottom, .withdraw_bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.withdraw_top{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.income_title {
+  font-size: 30rpx;
+}
+
+.income_time, .income_num {
+  font-size: 22rpx;
+  color: #999;
+}
+
+.income_money {
+  font-size: 24rpx;
+}
+
+.income_money.plus {
+  color: #f23c4e;
+}
+
+.income_money.minus {
+  color: #39c800;
+}
+
+.withdrawItem {
+  height: 150rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 2rpx solid #f2f2f2;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 10rpx 20rpx;
+}
+
+.withdraw_title {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.withdraw_time, .withdraw_status {
+  font-size: 23rpx;
+  color: #999;
+}
+.withdraw_time{
+  flex-shrink: 0;
+}
+.withDrawMoney{
+  font-size: 24rpx;
+}
+.withDrawFail {
+  color: #f35;
+}
+
+.withDrawSucces {
+  color: #78ce08;
+}
+
+.processing {
+  color: #39f;
+}

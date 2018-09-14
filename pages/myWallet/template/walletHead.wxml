@@ -1,0 +1,10 @@
+<wxs src="../../../filter/filter.wxs" module="filter" />
+<template name='walletHead'>
+  <view class='head'>
+    <text class='Balance'>钱包余额</text>
+    <text class='money'>￥{{filter.formatMoney(balance)}}</text>
+    <button class='withdrawNow' bindtap='withdraw' loading='{{moneyLoading}}' disabled='{{!hasInfo}}'>立即提现</button>
+    <text class='totleMoney'>累计结算金额：￥{{filter.formatMoney(totalEarnings)}}</text>
+    <view class='quanquan'></view>
+  </view>
+</template>

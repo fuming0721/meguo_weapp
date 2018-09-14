@@ -1,0 +1,18 @@
+<wxs src="../../../filter/filter.wxs" module="filter" />
+<template name='detailWithdrawItem'>
+  <view class='withdrawItem'>
+    <view class='withdraw_top'>
+      <view class='withdraw_title'>
+        <view>提现到支付宝：</view>
+        <view>{{pay_account}}</view>
+      </view>
+      <text class='withdraw_time'>{{filter.formatFullDate(created_time)}}</text>
+    </view>
+    <view class='withdraw_bottom'>
+      <text class='withdraw_status'>{{filter.getWithdrawStatus(status, remark)}}</text>
+      <text class="withDrawMoney processing" wx-if="status=='0'">-{{filter.formatMoney(amount)}}元</text>
+      <text class="withDrawMoney withDrawSucces" wx:elif="status=='1'">-{{filter.formatMoney(amount)}}元</text>
+      <text class="withDrawMoney withDrawFail" wx:else="status=='2'">+{{filter.formatMoney(amount)}}元</text>
+    </view>
+  </view>
+</template>

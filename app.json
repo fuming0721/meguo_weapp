@@ -22,9 +22,13 @@
     "pages/fansOrder/fansOrder",
     "pages/fansList/myFans/myFans",
     "pages/help/help",
+    "pages/help/helpDetail/helpDetail",
     "pages/myCollection/myCollection",
     "pages/goldDetailList/goldDetailList",
-    "pages/fansList/fansDetail/fansDetail"
+    "pages/fansList/fansDetail/fansDetail",
+    "pages/money/withdraw/withdraw",
+    "pages/money/aboutAlipay/aboutAlipay",
+    "pages/bindMobile/bindMobile"
   ],
   "window": {
     "backgroundTextStyle": "light",

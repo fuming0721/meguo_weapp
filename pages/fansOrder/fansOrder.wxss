@@ -46,6 +46,7 @@
 }
 .jdd-rili{
   margin-right: 4rpx;
+  font-size: 24rpx;
 }
 .warningInfo {
   height: 60rpx;
@@ -53,6 +54,9 @@
   font-size: 24rpx;
   color: #666;
   line-height: 60rpx;
+  position: sticky;
+  top: 80rpx;
+  z-index: -1;
 }
 
 .fansOrderPage {

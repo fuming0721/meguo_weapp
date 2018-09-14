@@ -12,7 +12,7 @@
 <!-- 详情页淘口令弹窗 -->
 <import src='./template/taokouling.wxml' />
 
-<view>
+<view class='detailPage'>
   <scroll-view class='detail' wx:if="{{flag}}" scroll-y="{{isScroll}}" scroll-into-view="{{toIndex}}" scroll-with-animation='true' lower-threshold='100' bindscrolltolower='scrolltolower' enable-back-to-top='true' bindscroll='myScroll'>
     <template is='detailTop' data='{{ goodsData }}'></template>
     <template is='sellerInfo' wx:if="{{sellerInfo}}" data='{{sellerInfo, sellerIconWidth, sellerIconHeight, sellerIcon}}'></template>

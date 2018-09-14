@@ -1,2 +1,17 @@
-<!--pages/myWallet/myWallet.wxml-->
-<text>pages/myWallet/myWallet.wxml</text>
+<!-- 我的钱包顶部 -->
+<import src='./template/walletHead.wxml' />
+<!-- 我的钱包收入明细 -->
+<import src='./template/detailIncome.wxml' />
+<!-- 我的钱包提现明细 -->
+<import src='./template/detailWithdraw.wxml' />
+
+<view class='myWalletPage'>
+  <template is='walletHead' data="{{ ...walletInfo, balance, hasInfo, moneyLoading }}"></template>
+  <view class='nav'>
+    <block wx:for="{{nav}}" wx:key="{{index}}">
+      <view class='navItem {{currentTemplate == item.name?"current":""}}' bindtap='navTouch' data-name='{{item.name}}'>{{item.title}}</view>
+    </block>
+  </view>
+
+  <template is='{{currentTemplate}}' data="{{ incomeList, haveIncome, incomeNextpage, withdrawList, haveWithdraw, withdrawNextPage }}"></template>
+</view>

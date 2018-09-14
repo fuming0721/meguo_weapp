@@ -1,0 +1,24 @@
+<import src='./detailIncomeItem.wxml' />
+<template name='detailIncome'>
+  <view class='moneyBox'>
+    <view class='moneyBox_have' wx:if="{{haveIncome}}">
+      <block wx:for="{{incomeList}}" wx:key="{{index}}">
+        <template is="detailIncomeItem" data="{{...item}}" />
+      </block>
+
+      <view class="weui-loadmore" wx:if='{{incomeNextpage}}'>
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips mg_loading">正在加载...</view>
+      </view>
+
+      <view class="weui-loadmore weui-loadmore_line" wx:else>
+        <view class="weui-loadmore__tips weui-loadmore__tips_in-line mg_noMore">没有更多了</view>
+      </view>
+    </view>
+
+    <view class='noList' wx:else>
+      <image mode='widthFix' src='/images/ohNo.png'></image>
+      <text class='aiyo'>哎哟，还没有收入</text>
+    </view>
+  </view>
+</template>

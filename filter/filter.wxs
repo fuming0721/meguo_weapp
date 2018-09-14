@@ -47,7 +47,7 @@ var DateFr = function(time) {
 }
 
 // 格式化成完整时间
-var formatFullDate = function (value) {
+var formatFullDate = function(value) {
   var now = getDate(value * 1000);
   var year = now.getFullYear();
   var month = now.getMonth() + 1;
@@ -64,7 +64,7 @@ var formatFullDate = function (value) {
 // 格式化日期
 var formatDate = function(str) {
   var now = getDate();
-    difference = now - str * 1000,
+  difference = now - str * 1000,
     result = '',
     minute = 1000 * 60,
     hour = minute * 60,
@@ -95,8 +95,8 @@ var formatDate = function(str) {
 };
 
 // 粉丝订单状态判断
-var orderStatus = function(value){
-  switch (value){
+var orderStatus = function(value) {
+  switch (value) {
     case 3:
       return '已结算';
       break;
@@ -108,10 +108,60 @@ var orderStatus = function(value){
       break;
     case 14:
       return '已成功';
-      break;      
+      break;
   }
 };
 
+// 我的钱包收入明细的类型
+var formatIncomeType = function(value, type) {
+  switch (value) {
+    case 1:
+      return '提现扣款';
+      break;
+    case 2:
+      return '账单获取';
+      break;
+    case 3:
+      return '提现退款';
+      break;
+    case 4:
+      return '金币兑换';
+      break;
+    case 5:
+      switch (type) {
+        case 1:
+          return '新人红包';
+          break;
+        case 2:
+          return '绑定手机红包';
+          break;
+        case 3:
+          return '打开推送红包';
+          break;
+        case 4:
+          return '第一次提交订单红包';
+          break;
+        case 5:
+          return '邀请好友红包';
+          break;
+      }
+  }
+};
+
+// 我的钱包提现明细处理状态
+var getWithdrawStatus = function(value, remark) {
+  switch (value) {
+    case 0:
+      return '处理中';
+      break;
+    case 1:
+      return '提现成功'
+      break;
+    case 2:
+      return '提现失败：'+remark
+      break
+  }
+};
 module.exports = {
   over10000: over10000,
   formatMoney: formatMoney,
@@ -121,5 +171,7 @@ module.exports = {
   getShopSourceWithSearch: getShopSourceWithSearch,
   formatDate: formatDate,
   formatFullDate: formatFullDate,
-  orderStatus: orderStatus
+  orderStatus: orderStatus,
+  formatIncomeType: formatIncomeType,
+  getWithdrawStatus: getWithdrawStatus
 }

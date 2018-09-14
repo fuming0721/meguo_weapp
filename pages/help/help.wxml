@@ -1,2 +1,19 @@
 <!--pages/help/help.wxml-->
-<web-view src="https://m.meguo.com/help?channel=2"></web-view>
+<view class='helpPage'>
+  <scroll-view class='helpMenu' scroll-y="{{true}}">
+    <block wx:for="{{helpMenu}}" wx:key="{{index}}">
+      <button class='menuItem {{currentMenu == item.id ? "activeMelu" : ""}}' bindtap='menuChange' data-id='{{item.id}}' disabled='{{currentMenu == item.id}}'>
+        <image class='menuItem_icon' src='{{item.icon}}' mode='widthFix'></image>
+        <text class='menuItem_name'>{{item.name}}</text>
+      </button>
+    </block>
+  </scroll-view>
+
+  <scroll-view class='helpList' scroll-y="{{true}}">
+    <block wx:for="{{helpNavList}}" wx:key="{{index}}">
+      <navigator class='helpList_item' url='helpDetail/helpDetail?title={{item.title}}&content={{item.content}}'>
+        <view class='helpList_item_text'>{{item.title}}</view>
+      </navigator> 
+    </block>
+  </scroll-view>
+</view>

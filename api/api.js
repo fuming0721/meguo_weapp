@@ -147,6 +147,43 @@ const myCollectionList = (parmas) => {
 const getInvitationImg = (parmas) => {
   wxRequst(parmas, baseUrl + '/api/wx-mini-program/invitation-img?access_token=' + wx.getStorageSync('access_token'))
 };
+// 我的钱包
+const getMyWallet = (parmas) => {
+  wxRequst(parmas, baseUrl + '/api/wx-mini-program/agent-earnings?access_token=' + wx.getStorageSync('access_token'))
+};
+// 我的钱包收入明细
+const getDetailIncome = (parmas) => {
+  wxRequst(parmas, baseUrl + '/api/wx-mini-program/agent-funds-list?access_token=' + wx.getStorageSync('access_token'))
+};
+// 我的钱包提现明细
+const getDetailWithdraw = (parmas) => {
+  wxRequst(parmas, baseUrl + '/api/wx-mini-program/agent-withdraw-list?access_token=' + wx.getStorageSync('access_token'))
+};
+// 帮助中心目录
+const getHelpMenu = (parmas) => {
+  wxRequst(parmas, baseUrl + '/api/user/help-cate?channel=2')
+};
+// 帮助中心右侧list
+const getHelpNav = (parmas) => {
+  wxRequst(parmas, baseUrl + '/api/user/help-article')
+};
+// 获取手机验证码
+const getCode = (parmas) => {
+  wxRequst(parmas, baseUrl + '/api/wx-mini-program/user-get-code?access_token=' + wx.getStorageSync('access_token'))
+};
+// 没有密码时提交绑定手机号
+const initMobile = (parmas) => {
+  wxRequst(parmas, baseUrl + '/api/wx-mini-program/init-mobile?access_token=' + wx.getStorageSync('access_token'))
+};
+// 有密码时提交绑定手机号
+const bindMobile = (parmas) => {
+  wxRequst(parmas, baseUrl + '/api/wx-mini-program/bind-mobile?access_token=' + wx.getStorageSync('access_token'))
+};
+// 获取支付宝信息
+const getIsBindAlipay = (parmas) => {
+  wxRequst(parmas, baseUrl + '/api/wx-mini-program/is-bind?access_token=' + wx.getStorageSync('access_token'))
+};
+
 
 module.exports = {
   getBannerImg,
@@ -179,5 +216,14 @@ module.exports = {
   myFansList,
   fansDetailList,
   myCollectionList,
-  getInvitationImg
+  getInvitationImg,
+  getMyWallet,
+  getDetailIncome,
+  getDetailWithdraw,
+  getHelpMenu,
+  getHelpNav,
+  getCode,
+  initMobile,
+  bindMobile,
+  getIsBindAlipay
 }

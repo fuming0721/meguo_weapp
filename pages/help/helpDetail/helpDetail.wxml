@@ -1,0 +1,4 @@
+<!--pages/help/helpDetail/helpDetail.wxml-->
+<view class='helpDetailPage'>
+  <rich-text class='helpDetail_content' nodes="{{content}}"></rich-text>
+</view>

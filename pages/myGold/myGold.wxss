@@ -30,7 +30,7 @@
 }
 
 .exchangeBtn {
-  font-size: 28rpx !important;
+  font-size: 24rpx !important;
   color: #666;
   height: 48rpx;
   border-radius: 48rpx;

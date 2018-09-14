@@ -1,0 +1,58 @@
+/* pages/money/aboutAlipay/aboutAlipay.wxss */
+.aboutAlipayPage{
+  margin-top: 40rpx;
+}
+.ali_inputItem{
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 2rpx;
+}
+.ali_title{
+  width: 160rpx;
+  flex-shrink: 0;
+  height: 100%;
+  line-height: 100rpx;
+  text-align: left;
+  font-size: 28rpx;
+  color: #333;
+}
+.ali_input{
+  flex-grow: 1;
+  font-size: 28rpx;
+  color: #666;
+  padding-right: 20rpx;
+}
+.jdd-cuox{
+  font-size: 40rpx;
+  color: #999;
+}
+.getCode{
+  width: 200rpx;
+  height: 60rpx;
+  font-size: 22rpx;
+  padding: 0 !important;
+  margin-left: 20rpx;
+  flex-shrink: 0;
+}
+.mobileNum{
+  flex-grow: 1;
+  text-align: left;
+  font-size: 28rpx;
+  color: #666;
+}
+.pla_color{
+  color: #ccc;
+  font-size: 26rpx;
+}
+.submitBtn{
+  margin-top: 60rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  width: 80%;
+}

@@ -1,0 +1,64 @@
+/* pages/bindMobile/bindMobile.wxss */
+
+.bindMobilePage {
+  padding: 60rpx;
+  box-sizing: border-box;
+}
+
+.input_box {
+  height: 80rpx;
+  width: 100%;
+  margin-bottom: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 2rpx solid #dcdcdc;
+  border-radius: 80rpx;
+  box-sizing: border-box;
+  padding: 0 10rpx;
+}
+
+.input {
+  font-size: 26rpx;
+  color: #666;
+  flex-grow: 1;
+}
+.icon{
+  font-size: 40rpx;
+  color: #999;
+  flex-shrink: 0;
+  margin: 0 10rpx;
+}
+.placeholder{
+  font-size: 24rpx;
+  color: #ccc;
+}
+
+.getCode{
+  height: 60rpx;
+  width: 200rpx;
+  font-size: 24rpx;
+  border-radius: 160rpx;
+  background-color: #94DA42;
+  line-height: 60rpx;
+  padding: 0;
+  color: #666;
+  flex-shrink: 0;
+}
+.getCode::after{
+  border: none;
+}
+.jdd-cuox{
+  font-size: 40rpx;
+  color: #999;
+  margin: 0 10rpx;
+}
+.submitBtn{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+.button-hover{
+  opacity: 0.8
+}

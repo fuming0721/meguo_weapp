@@ -1,7 +1,7 @@
 <!--pages/inviteFriends/inviteFriends.wxml-->
 <!-- 轮播 -->
 <import src='./template/swiper.wxml' />
-<!-- 图片保存 -->
+<!-- 分享 -->
 <import src='./template/share.wxml' />
 
 <view class='inviteFriendsPage'>

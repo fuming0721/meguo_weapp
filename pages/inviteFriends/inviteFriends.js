@@ -1,7 +1,6 @@
 // pages/inviteFriends/inviteFriends.js
 import api from '../../api/api.js'
 const sysInfo = getApp().globalData.sysInfo
-console.log(sysInfo)
 Page({
 
   /**

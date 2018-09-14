@@ -1,8 +1,10 @@
 /* pages/detail/detail.wxss */
-
+page, .detailPage{
+  height: 100%;
+}
 .detail {
   background-color: #f2f2f2;
-  height: 93vh;
+  height: 100%;
 }
 
 .detail_top_box {
@@ -47,7 +49,7 @@
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid #f2f2f2;
-  height: 7vh;
+  height: 80rpx;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -263,6 +265,7 @@
 
 .newGoodsList_box {
   margin-top: 20rpx;
+  margin-bottom: 100rpx;
 }
 
 .newGoodsList {

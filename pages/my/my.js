@@ -54,8 +54,14 @@ Page({
     ]
   },
   onLoad() {
-    this.setData({
-      userInfo: app.globalData.userInfo
+    wx.showLoading({
+      title: '加载中...',
+    })
+    app.updateUserInfo().then(res => {
+      this.setData({
+        userInfo: res
+      })
+      wx.hideLoading()
     })
   },
 

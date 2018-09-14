@@ -1,0 +1,18 @@
+<wxs src="../../../filter/filter.wxs" module="filter" />
+<template name='detailIncomeItem'>
+  <view class='incomeItem'>
+    <view class='incomeItem_top'>
+      <text class='income_title'>{{filter.formatIncomeType(serial_type, type)}}</text>
+      <text class='income_time'>创建日: {{filter.DateFr(created_time)}}</text>
+    </view>
+    <view class='incomeItem_bottom'>
+      <text class='income_num'>数量{{filter.MathRound(number)}}枚</text>
+      <view class='income_money plus' wx:if="{{amount>0}}">
+        +{{filter.formatMoney(amount)}}元
+      </view>
+      <view class='income_money minus' wx:else>
+        -{{filter.formatMoney(amount)}}元
+      </view>
+    </view>
+  </view>
+</template>
