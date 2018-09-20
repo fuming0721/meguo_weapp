@@ -167,7 +167,7 @@ const getHelpMenu = (parmas) => {
 const getHelpNav = (parmas) => {
   wxRequst(parmas, baseUrl + '/api/user/help-article')
 };
-// 获取手机验证码
+// 绑定手机获取手机验证码
 const getCode = (parmas) => {
   wxRequst(parmas, baseUrl + '/api/wx-mini-program/user-get-code?access_token=' + wx.getStorageSync('access_token'))
 };
@@ -182,6 +182,18 @@ const bindMobile = (parmas) => {
 // 获取支付宝信息
 const getIsBindAlipay = (parmas) => {
   wxRequst(parmas, baseUrl + '/api/wx-mini-program/is-bind?access_token=' + wx.getStorageSync('access_token'))
+};
+// 绑定支付宝获取验证码
+const bindPayGetCode = (parmas) => {
+  wxRequst(parmas, baseUrl + '/api/wx-mini-program/bind-pay-send-msg?access_token=' + wx.getStorageSync('access_token'))
+};
+// 绑定支付宝
+const bindAliPay = (parmas) => {
+  wxRequst(parmas, baseUrl + '/api/wx-mini-program/bind-pay?access_token=' + wx.getStorageSync('access_token'))
+};
+// 提现
+const aliPayWithdraw = (parmas) => {
+  wxRequst(parmas, baseUrl + '/api/wx-mini-program/withdraw?access_token=' + wx.getStorageSync('access_token'))
 };
 
 
@@ -225,5 +237,8 @@ module.exports = {
   getCode,
   initMobile,
   bindMobile,
-  getIsBindAlipay
+  getIsBindAlipay,
+  bindPayGetCode,
+  bindAliPay,
+  aliPayWithdraw
 }

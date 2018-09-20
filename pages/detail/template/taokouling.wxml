@@ -1,6 +1,10 @@
 <template name='taokouling'>
-    <view>{{taokouling}}</view>
-    <button class="weui-btn mini-btn" type="default" size="mini" bindtap='copyTKL'>点击复制</button>
-    <button class="weui-btn mini-btn" type="default" size="mini" bindtap='closeTaokouling'>关闭</button>
-    <button bindtap='onShareAppMessage' open-type="share">分享</button>
+  <view class='taokoulingCenter'>
+    <view class='copyTitle'>{{copyTitle}}</view>
+    <view class='cppyArea'>
+      <view class='taokouling_text'>{{taokouling}}</view>
+      <view class="taokoulingbtn" size="mini" bindtap='copyTKL'>复制</view>
+    </view>
+    <view class='taokouling_des'>复制以上淘口令后，打开手机淘宝即可</view>
+  </view>
 </template>

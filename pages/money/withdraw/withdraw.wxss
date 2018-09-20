@@ -1,1 +1,42 @@
 /* pages/money/withdraw/withdraw.wxss */
+@import '../aboutAlipay/aboutAlipay';
+
+.topIconBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 280rpx;
+}
+.topIconBox image{
+  width: 120rpx;
+  margin: 0 20rpx;
+}
+.ali_input{
+  padding-left: 20rpx;
+  height: 100%;
+  line-height: 100rpx;
+}
+.moneyDes{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+  height: 80rpx;
+}
+.moneyY{
+  font-size: 24rpx;
+  color: #666;
+}
+.warning{
+  font-size: 22rpx;
+  color: #999;
+}
+.submitBtn{
+  margin: 80rpx auto 0;
+}
+.changeAccount{
+  width: 120rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  font-size: 24rpx;
+}

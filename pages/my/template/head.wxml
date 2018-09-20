@@ -1,7 +1,7 @@
 <template name='head'>
-  <view class='setting' wx:if="{{userInfo}}">
+  <!-- <navigator class='setting' wx:if="{{userInfo}}" url='/pages/setting/setting'>
     <text class='settingIcon iconfont jdd-shezhi'></text> 账号管理
-  </view>
+  </navigator> -->
   <view class='head' wx:if="{{!userInfo}}">
     <view class='headLeft'>
       <image class='userIcon' src='/images/fansholdimg.png'></image>

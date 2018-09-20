@@ -1,2 +1,29 @@
 <!--pages/money/withdraw/withdraw.wxml-->
-<text>pages/money/withdraw/withdraw.wxml</text>
+<view class='withdrawPage'>
+  <view class='topIconBox'>
+    <image src='/images/mybag.png' mode='widthFix'></image>
+    <image src='/images/arrowRight.png' mode='widthFix'></image>
+    <image src='/images/alipay.png' mode='widthFix'></image>
+  </view>
+
+  <view class='infoBox'>
+    <view class='ali_inputItem'>
+      <text class='ali_title'>真实姓名</text>
+      <text class='ali_input'>{{alipayInfo.true_name}}</text>
+    </view>
+    <view class='ali_inputItem'>
+      <text class='ali_title'>到账支付宝</text>
+      <text class='ali_input'>{{alipayInfo.pay_account}}</text>
+      <button class='changeAccount' type='warn' plain bindtap='changeAccount'>修改</button>
+    </view>
+    <view class='ali_inputItem'>
+      <text class='ali_title'>提现金额</text>
+      <text class='ali_input'>￥{{userInfo.balance}}</text>
+    </view>
+  </view>
+  <view class='moneyDes'>
+    <text class='moneyY'>￥{{userInfo.balance}}</text>
+    <text class='warning'>最低提现金额为10元</text>
+  </view>
+  <button class='submitBtn' type='warn' bindtap='submitForm' loading='{{isSending}}' disabled='{{isSending || userInfo.balance < 10}}'>提交</button>
+</view>

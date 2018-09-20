@@ -31,7 +31,8 @@ Page({
     canShare: false, //能否分享
     backHomePosition: sysInfo.screenHeight * 0.2, //返回首页的按钮位置
     userInfo: null,
-    accessToken: ''   //在没有登录没有Token的情况下不能附加在url上
+    accessToken: '', //在没有登录没有Token的情况下不能附加在url上
+    copyTitle: '', // 淘口令的title
   },
 
   // 生命周期函数--监听页面加载
@@ -88,6 +89,12 @@ Page({
         wx.hideToast();
         // 本地存储
         utils.setFootprints(res.data.id)
+        // this.getCavans().then(res => {
+        //   this.setData({
+        //     shareImgUrl: res,
+        //     canShare: true
+        //   })
+        // })
       }
     })
   },
@@ -151,7 +158,7 @@ Page({
   // 滑动到底部加载更多数据
   scrolltolower() {
     if (this.data.loading && this.data.nextPage) {
-      this.getDetailNewGoods();
+      // this.getDetailNewGoods();
     }
   },
 
@@ -388,6 +395,14 @@ Page({
       },
       success: res => {
         console.log(res.data)
+        wx.setClipboardData({
+          data: res.data.data.model,
+          success: res => {
+            this.setData({
+              copyTitle: '复制淘口令成功'
+            })
+          }
+        })
         this.setData({
           taokouling: res.data.data.model
         })
@@ -405,6 +420,43 @@ Page({
     })
   },
 
+  // 处理图片， 暂时不用
+  getCavans() {
+    const ctx = wx.createCanvasContext('myCanvas');
+    ctx.save()
+    const screenWidth = sysInfo.screenWidth
+    return new Promise((resolve, reject)=>{
+      wx.getImageInfo({
+        src: this.data.goodsData.thread_img, //请求的网络图片路径
+        success: res => {
+          //请求成功后将会生成一个本地路径即res.path,然后将该路径缓存到storageKeyUrl关键字中
+          console.log(res)
+          ctx.drawImage(res.path, 0, 0, screenWidth, screenWidth);
+          ctx.setFontSize(24)
+          ctx.setFillStyle("#f35")
+          ctx.fillText('券后￥', 10, screenWidth * 0.7+28)
+          
+          // ctx.strokeText(`${this.data.goodsData.threadsGoods.price}, 原价:${this.data.goodsData.threadsGoods.origin_price}`, 0, screenWidth * 0.8)
+          ctx.draw(false, setTimeout(() => {
+            wx.canvasToTempFilePath({
+              x: 0,
+              y: 0,
+              width: screenWidth,
+              height: screenWidth * 0.8,
+              destWidth: screenWidth,
+              destHeight: screenWidth * 0.8,
+              fileType: 'jpg',
+              canvasId: 'myCanvas',
+              success: res => {
+                console.log(res.tempFilePath)
+                resolve(res.tempFilePath)
+              }
+            })
+          }, 300))
+        }
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -445,7 +497,7 @@ Page({
       withShareTicket: true
     })
     return {
-      title: this.data.goodsData.title,
+      title: `券后:￥${parseFloat(this.data.goodsData.threadsGoods.price).toFixed(2)}, 原价${parseFloat(this.data.goodsData.threadsGoods.origin_price).toFixed(2)}, ${this.data.goodsData.title}`,
       path: `/pages/detail/detail?id=${this.data.goodsData.id}`,
       imageUrl: this.data.goodsData.thread_img,
       success: (res) => {

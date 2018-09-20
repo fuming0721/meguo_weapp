@@ -1,0 +1,64 @@
+/* pages/setting/setting.wxss */
+.settingBox{
+  margin-top: 20rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.setting_item{
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+.item_label{
+  width: 200rpx;
+  font-size: 28rpx;
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #666;
+}
+.item_link{
+  font-size: 30rpx;
+  height: 100%;
+  width: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+}
+.item_name{
+  flex-grow: 1;
+  height: 80rpx;
+  text-align: right;
+  padding: 15rpx 0;
+  box-sizing: border-box;
+}
+.item_name>text{
+  font-size: 24rpx;
+  color: #999;
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.userIcon{
+  width: 70rpx;
+  border-radius: 70rpx;
+}
+
+.avatar{
+  height: 100rpx;
+}
+.avatar .item_name{
+  height: 100rpx;
+}
+.btnbtn{
+  width: 80%;
+  margin-top: 60rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}

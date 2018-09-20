@@ -248,7 +248,7 @@ Page({
       withShareTicket: true
     })
     return {
-      title: this.data.goodsData.title,
+      title: `券后:￥${parseFloat(this.data.goodsData.zk_final_price - this.data.couponamount).toFixed(2)}, 原价${parseFloat(this.data.goodsData.zk_final_price).toFixed(2)}, ${this.data.goodsData.title}`,
       path: `/pages/detail/detail?id=${this.data.goodsData.id}`,
       imageUrl: this.data.goodsData.pict_url,
       success: (res) => {

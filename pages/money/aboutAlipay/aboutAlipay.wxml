@@ -4,14 +4,14 @@
     <text class='ali_title'>真实姓名</text>
     <input class='ali_input' placeholder='请输入真实姓名' placeholder-class='pla_color' value='{{name}}' bindinput='nameInput'>
     </input>
-    <icon class='iconfont jdd-cuox' hidden='{{!name.length}}'></icon>
+    <icon class='iconfont jdd-cuox' bindtap='clearValue' data-index='0' hidden='{{!name.length}}'></icon>
   </view>
 
   <view class='ali_inputItem'>
     <text class='ali_title'>支付宝号</text>
-    <input class='ali_input' placeholder='请输入真实姓名' placeholder-class='pla_color' value='{{alipayNum}}' bindinput='alipayNumInput'>
+    <input class='ali_input' placeholder='请输入支付宝账号' placeholder-class='pla_color' value='{{alipayNum}}' bindinput='alipayNumInput'>
     </input>
-    <icon class='iconfont jdd-cuox' hidden='{{!alipayNum.length}}'></icon>
+    <icon class='iconfont jdd-cuox' bindtap='clearValue' data-index='1' hidden='{{!alipayNum.length}}'></icon>
   </view>
 
   <view class='ali_inputItem'>
@@ -21,11 +21,14 @@
 
   <view class='ali_inputItem'>
     <text class='ali_title'>验证码</text>
-    <input class='ali_input' placeholder='请输入真实姓名' placeholder-class='pla_color' value='{{code}}' bindinput='codeInput'>
+    <input class='ali_input' placeholder='请输入验证码' placeholder-class='pla_color' value='{{code}}' bindinput='codeInput' maxlength="6">
     </input>
-    <icon class='iconfont jdd-cuox' hidden='{{!code.length}}'></icon>
-    <button class='getCode' size='mini' type='primary' disabled='{{disabledGetCode}}'>获取验证码</button>
+    <icon class='iconfont jdd-cuox' bindtap='clearValue' data-index='2' hidden='{{!code.length}}'></icon>
+    <button class='getCode' size='mini' loading='{{isLoading}}' bindtap='getCode' type='{{typeColor}}' disabled='{{disabledGetCode}}'>
+      获取验证码
+     <block wx:if="{{codeSending}}">{{times}}s</block>
+    </button>
   </view>
 
-  <button type='warn' class='submitBtn' disabled='{{!nameIsOk || !alipayNumIsOk|| !codeIsOk}}'>提交</button>
+  <button type='warn' class='submitBtn' bindtap='bindingAlipay' loading='{{isBinding}}' disabled='{{!nameIsOk || !alipayNumIsOk || !codeIsOk || isBinding}}'>提交</button>
 </view>

@@ -18,6 +18,7 @@
     <template is='sellerInfo' wx:if="{{sellerInfo}}" data='{{sellerInfo, sellerIconWidth, sellerIconHeight, sellerIcon}}'></template>
     <template is='detailContent' data='{{ goodsData, isLoading, goodsImgArr, showMore }}'></template>
     <template is='newGoodsList' data='{{ newGoodsListArr, nextPage, userInfo }}'></template>
+
   </scroll-view>
 
   <view class='bottomBtnBox'>
@@ -32,7 +33,11 @@
     <icon class='iconfont jdd-top home_icon'></icon>
   </view>
 
-  <view class='taokouling' animation="{{animationData}}">
-    <template is='taokouling' data='{{ newGoodsListArr, taokouling }}'></template>
+  <view class='taokouling' animation="{{animationData}}" catchtap='closeTaokouling'>
+    <template is='taokouling' data='{{ newGoodsListArr, taokouling, copyTitle }}'></template>
   </view>
+
+  <!-- <view class='sss'>
+    <canvas canvas-id="myCanvas" class="myCanvas"></canvas>
+  </view> -->
 </view>

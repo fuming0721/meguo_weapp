@@ -1,0 +1,41 @@
+<!--pages/setting/setting.wxml-->
+<view class='settingPage'>
+  <view class='settingBox'>
+    <view class='setting_item avatar'>
+      <text class='item_label'>头像</text>
+      <view class='item_name'>
+        <image src='{{userInfo.avatar}}' mode='widthFix' class='userIcon'></image>
+      </view>
+      <view class='iconfont jdd-right item_link' bindtap='changeIcon'></view>
+    </view>
+
+    <view class='setting_item'>
+      <text class='item_label'>昵称</text>
+      <view class='item_name'>
+        <text>{{userInfo.username}}</text>
+      </view>
+      <navigator class='iconfont jdd-right item_link'></navigator>
+    </view>
+  </view>
+
+  <view class='settingBox'>
+    <view class='setting_item'>
+      <text class='item_label'>绑定手机</text>
+      <view class='item_name'>
+        <text wx:if='{{userInfo.is_bind_mobile}}'>{{userInfo.hide_mobile}}</text>
+        <text we:else>未绑定</text>
+      </view>
+      <navigator class='iconfont jdd-right item_link'></navigator>
+    </view>
+
+    <view class='setting_item'>
+      <text class='item_label'>绑定邮箱</text>
+      <view class='item_name'>
+        <text wx:if='{{userInfo.is_bind_email}}'>{{userInfo.hide_email}}</text>
+        <text we:else>未绑定</text>
+      </view>
+      <navigator class='iconfont jdd-right item_link'></navigator>
+    </view>
+
+  </view>
+</view>

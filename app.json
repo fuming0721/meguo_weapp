@@ -28,7 +28,8 @@
     "pages/fansList/fansDetail/fansDetail",
     "pages/money/withdraw/withdraw",
     "pages/money/aboutAlipay/aboutAlipay",
-    "pages/bindMobile/bindMobile"
+    "pages/bindMobile/bindMobile",
+    "pages/setting/setting"
   ],
   "window": {
     "backgroundTextStyle": "light",
